@@ -23,9 +23,7 @@ FROM node:18-alpine AS production
 WORKDIR /app
 
 # Copy only the necessary files from the build stage
-COPY --from=base /app/package*.json ./
 COPY --from=base /app/.next ./.next
-COPY --from=base /app/node_modules ./node_modules
 
 # Expose the port the app runs on
 EXPOSE 3000
