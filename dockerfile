@@ -16,17 +16,20 @@ COPY . .
 # Build app
 RUN npm run build
 
-# Stage 2: Serve built app using Nginx
-FROM nginx:alpine
+# Use a lightweight image for serving the built application
+FROM node:18-alpine AS production
 
-# Copy built app from previous stage
-COPY --from=build /app/.next /usr/share/nginx/html
+# Set the working directory inside the container
+WORKDIR /app
 
-# Copy custom nginx configuration
-COPY default.conf /etc/nginx/conf.d/default.conf
+# Copy only the necessary files from the build stage
+COPY --from=base /app/package*.json ./
+COPY --from=base /app/.next ./.next
+COPY --from=base /app/public ./public
+COPY --from=base /app/node_modules ./node_modules
 
-# Expose port 80
-EXPOSE 80
+# Expose the port the app runs on
+EXPOSE 3000
 
-# Command to start Nginx when container starts
-CMD ["nginx", "-g", "daemon off;"]
+# Command to run the Next.js application in production mode
+CMD ["npm", "run", "start"]
