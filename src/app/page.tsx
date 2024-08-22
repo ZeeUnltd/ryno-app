@@ -182,9 +182,9 @@ export default function HomePage() {
           <h1 className="mx-auto text-2xl md:text-7xl font-inter text-[#0D0D12] w-2/3 text-center mt-7">
             Borderless Finance for Emerging Markets{" "}
           </h1>
-          <p className="mx-auto text-sm  font-aeonik_medium font-light text-[#666D80] w-2/3 text-center my-4">
-            Simplifying cross-border transactions and fuelling business growth
-            with innovative financial solutions.
+          <p className="mx-auto text-sm text-center font-aeonik_regular text-[#666D80] w-[90%] md:w-[38%]  my-4">
+            Simplifying cross-border transactions with innovative solutions to
+            accelerate economic growth for emerging market enterprises.
           </p>
           <div className="mx-auto font-light  flex flex-col md:flex-row gap-3 justify-center p-2 md:p-0 w-full  my-7">
             <button
@@ -226,9 +226,10 @@ export default function HomePage() {
             Simplify Cross-Border Transactions{" "}
           </h1>{" "}
           <p className="mx-auto text-sm text-center font-aeonik_regular text-[#666D80] w-[90%] md:w-[38%]  my-4">
-            Ryno is designed to eliminate the complexities of cross-border
-            payments, offering African enterprises the efficiency and
-            transparency they need to grow.
+            ryno is designed to eliminate the complexities of cross-border
+            payments, foreign exchange and treasury services, offering emerging
+            market enterprises the efficiency and transparency they need to run
+            operations and grow.
           </p>
           <div className="mt-14 flex flex-col md:flex-row md:justify-between gap-4">
             <Image
