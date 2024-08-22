@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Bold.otf");
+  src: url("/fonts/Aeonik-Bold.otf") format("embedded-opentype"),
+    url("/fonts/Aeonik-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Aeonik-Medium";
+  src: url("/fonts/Aeonik-Medium.otf");
+  src: url("/fonts/Aeonik-Medium.otf") format("embedded-opentype"),
+    url("/fonts/Aeonik-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "Aeonik-Regular";
+  src: url("/fonts/Aeonik-Regular.otf");
+  src: url("/fonts/Aeonik-Regular.otf") format("embedded-opentype"),
+    url("/fonts/Aeonik-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Aeonik-Black";
+  src: url("/fonts/Aeonik-Black.otf");
+  src: url("/fonts/Aeonik-Black.otf") format("embedded-opentype"),
+    url("/fonts/Aeonik-Black.otf") format("truetype");
+}
+
+.active-link {
+  border-bottom: 4px solid #3b82f6; /* Tailwind's blue-500 color */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
