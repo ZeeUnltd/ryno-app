@@ -89,16 +89,16 @@ export default function HomePage() {
             {menuItems.map((item) => (
               <li
                 key={item.href}
-                className="hidden md:flex md:items-center md:justify-between"
+                className="hidden md:flex md:items-center md:justify-between mt-2"
               >
                 <a
                   href={item.href}
                   onClick={(e) => handleSmoothScroll(e, item?.href)}
                   className={`${
                     activeSection === item?.href
-                      ? "border-b-4 border-blue-500 shadow-lg"
+                      ? "border-b-2 border-blue-500 shadow-lg"
                       : ""
-                  } pb-2 font-aeonik_regular`}
+                  } pb-1 font-aeonik_regular`}
                 >
                   {item?.label}
                 </a>
@@ -120,9 +120,9 @@ export default function HomePage() {
                           onClick={(e) => handleSmoothScroll(e, item?.href)}
                           className={`${
                             activeSection === item?.href
-                              ? "border-b-4 border-blue-500 shadow-lg"
+                              ? "border-b-1 border-blue-500 shadow-lg"
                               : ""
-                          } md:pb-2 font-aeonik_regular`}
+                          } md:pb-1 font-aeonik_regular`}
                         >
                           {item?.label}
                         </a>
@@ -268,7 +268,7 @@ export default function HomePage() {
             />
             <span className="text-[#808897]">Fueling Business Growth</span>
           </h2>{" "}
-          <h1 className="mx-auto text-2xl md:text-[52px] font-inter text-[#0D0D12] md:w-[45%] text-center mt-4">
+          <h1 className="mx-auto text-2xl md:text-6xl font-inter text-[#0D0D12] md:w-[45%] text-center mt-4">
             Empower Your Business with Ryno{" "}
           </h1>{" "}
           <p className="mx-auto text-sm text-center font-aeonik_regular text-[#666D80] w-[90%] md:w-[38%]  my-4">
