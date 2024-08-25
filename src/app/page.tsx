@@ -180,7 +180,7 @@ export default function HomePage() {
             </span>
           </h2>
           <h1 className="mx-auto text-2xl md:text-7xl font-inter text-[#0D0D12] w-2/3 text-center mt-7">
-            Borderless Finance for Emerging Markets{" "}
+            borderless finance for emerging markets{" "}
           </h1>
           <p className="mx-auto text-sm text-center font-aeonik_regular text-[#666D80] w-[90%] md:w-[38%]  my-4">
             Simplifying cross-border transactions with innovative solutions to
@@ -362,6 +362,59 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <section
+          id="contact-us"
+          className="md:min-h-screen mx-auto mt-24 w-[98%]"
+        >
+          <h2 className="gap-4 w-60  mt-24 mx-auto flex justify-center  items-center  rounded-lg border-[#DFE1E6] border px-[0.65rem] py-1">
+            {" "}
+            <Image
+              src={"/logo/flash-icon.svg"}
+              alt="zatum logo"
+              height={"14"}
+              width={"14"}
+            />
+            <span className="text-[#808897]">About Us</span>
+          </h2>{" "}
+          <h1 className="mx-auto text-2xl md:text-6xl font-inter text-[#0D0D12] md:w-[45%] text-center mt-4">
+            borderless finance at the speed of innovation
+          </h1>{" "}
+          <p className="mx-auto text-lg text-center font-aeonik_regular text-[#666D80] w-[90%] md:w-[90%]  my-4">
+            ryno is a global technology company innovating frictionless and
+            cost-efficient cross border financial solutions for enterprises in
+            emerging markets. with fast developing emerging markets economies
+            demanding better and more inclusive financial solutions, ryno was
+            founded by a team with over 30 years of global experience across
+            financial services, payments and technology, that is passionate
+            about providing equitable and innovative access to global financial
+            markets.
+          </p>{" "}
+          {/* <div className="my-24">
+            <Image
+              src={"/images/Container.svg"}
+              alt="ryno-illustration"
+              height={"1200"}
+              width={"800"}
+              className="w-[96%] mx-auto" // Make the image span the full width of its container
+            />
+          </div> */}
+          <div className="flex flex-col md:flex-row gap-2 mx-auto justify-between mt-24">
+            <div className="flex-1 rounded-xl border border-[#DFE1E6] bg-[#fff] p-6">
+              <p className="font-thin text-[#666D80] text-center py-16">
+                What drives our passion to innovate is financial inclusion and
+                the economic participation of emerging markets in the global
+                economy.
+              </p>
+            </div>
+            <div className="flex-1 rounded-xl border border-[#DFE1E6] bg-[#fff] p-6 mt-4 md:mt-0">
+              <p className="font-thin text-[#666D80] text-center h-60 py-16">
+                ryno’s innovative platform delivers near real-time, cost and
+                operationally efficient solutions with deep liquidity,
+                flexibility, and transparency.
+              </p>
+            </div>
+          </div>
+        </section>
         <section className=" mx-auto mt-24 w-[98%] border-[#b6b7b8] border-b">
           <div className="my-24">
             <Image
@@ -448,12 +501,20 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-7 flex-col flex md:flex-row items-center  justify-between">
-            <Image
-              src={"/logo/ryno-logo-new.svg"}
-              alt="zatum logo"
-              height={"68"}
-              width={"92"}
-            />
+            <div className="flex md:flex-row items-stretch gap-6">
+              <Image
+                src={"/logo/ryno-logo-new.svg"}
+                alt="zatum logo"
+                height={"68"}
+                width={"92"}
+              />
+              <Image
+                src={"/logo/supported_by.jpeg"}
+                alt="zatum logo"
+                height={"68"}
+                width={"150"}
+              />
+            </div>
             <div>
               <p className="text-[#666D80]  text-sm">
                 <Link
