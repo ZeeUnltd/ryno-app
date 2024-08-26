@@ -379,7 +379,7 @@ export default function HomePage() {
           <h1 className="mx-auto text-2xl md:text-6xl font-inter text-[#0D0D12] md:w-[45%] text-center mt-4">
             borderless finance at the speed of innovation
           </h1>{" "}
-          <p className="mx-auto text-lg text-center font-aeonik_regular text-[#666D80] w-[90%] md:w-[90%]  my-4">
+          <p className="mx-auto text-base text-center font-aeonik_regular text-[#666D80] w-[90%] md:w-[90%]  my-4">
             ryno is a global technology company innovating frictionless and
             cost-efficient cross border financial solutions for enterprises in
             emerging markets. with fast developing emerging markets economies
@@ -389,6 +389,17 @@ export default function HomePage() {
             about providing equitable and innovative access to global financial
             markets.
           </p>{" "}
+          <p className="mx-auto text-base text-center font-aeonik_regular text-[#666D80] w-[90%] md:w-[90%]  my-4">
+            rhyno financial inc is registered with FINTRAC in Canada as a Money
+            Service Business{" "}
+            <span className="text-[#33353c]">
+              (Registration number - C100000021)
+            </span>{" "}
+            and incorporated by the Government of Alberta{" "}
+            <span className="text-[#33353c]">
+              (Corporate Access Number: 2026336632)
+            </span>
+          </p>
           {/* <div className="my-24">
             <Image
               src={"/images/Container.svg"}
