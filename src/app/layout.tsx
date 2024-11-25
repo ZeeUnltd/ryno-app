@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import { Fraunces } from "@next/font/google";
 
 export const metadata: Metadata = {
   title: "RynoPay Web Application",
@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     "Simplifying cross-border transactions and fuelling business growth with innovative financial solutions.",
 };
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#fff]">
+      <body className={fraunces.variable}>
         {/* <Navbar /> */}
         {children}
       </body>
