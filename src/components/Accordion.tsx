@@ -54,13 +54,7 @@ const Accordion = () => {
     },
   ];
 
-  return (
-    <div className="max-w-lg mx-auto my-8">
-      {items.map((item, index) => (
-        <AccordionItem key={index} title={item.title} content={item.content} />
-      ))}
-    </div>
-  );
+  return <div className="max-w-lg mx-auto my-8"></div>;
 };
 
 export default Accordion;
