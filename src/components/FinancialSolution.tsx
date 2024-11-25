@@ -26,7 +26,7 @@ export default function FinancialSolutionsSection() {
         </h3>
         {/* Paragraph */}
         <p className="text-sm md:text-lg font-inter leading-relaxed">
-          Extend your business's reach globally with seamless access to
+          Extend your business&#39;s reach globally with seamless access to
           cross-border transfers, tailored FX payments, multi-currency exchange,
           and hassle-free payment collections—all designed specifically for
           enterprises in emerging markets.
