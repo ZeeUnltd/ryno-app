@@ -153,7 +153,7 @@ export default function HomePage() {
 
             {/* Second Text */}
             <h1 className="absolute font-fraunces w-full text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-2">
-              Borderless <span className="text-[#0040C2]">Transfer</span>
+              Borderless <span className="text-[#0040C2]">Finance</span>
             </h1>
 
             {/* Third Text */}
@@ -176,7 +176,7 @@ export default function HomePage() {
             </button>
             <div className="relative group">
               <button className="flex items-center bg-[#0040C2] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 w-full">
-                <span className="mr-2">Create an account</span>
+                <span className="mr-2">Create Account</span>
                 <Image
                   src="/icons/navigation-icon.svg"
                   height={14}
