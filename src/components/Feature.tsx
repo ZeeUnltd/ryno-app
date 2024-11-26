@@ -1,9 +1,9 @@
 export default function FeatureSection() {
   return (
     <section className="relative bg-white">
-      <div className="container mx-auto mt-4">
+      <div className="container mx-auto mt-20">
         {/* Section Header */}
-        <h2 className="text-3xl md:text-4xl font-light w-full md:w-[50%] font-fraunces text-gray-900 text-start mt-4 mb-12">
+        <h2 className="text-3xl md:text-4xl font-extralight w-full md:w-[50%] font-fraunces text-gray-900 text-start mt-4 mb-12">
           Explore seamless cross-border payment solutions for your business
         </h2>
 
@@ -20,10 +20,10 @@ export default function FeatureSection() {
               <span className="text-xs bg-[#6CFFF2] text-[#08857A] px-2 py-1 rounded-full inline-block mb-4">
                 IBAN Accounts
               </span>
-              <h3 className="text-2xl font-fraunces w-[65%] font-normal text-[#03625A] mb-4">
+              <h3 className="text-2xl font-fraunces w-[65%] font-extralight text-[#03625A] mb-4">
                 Establish Multi-Currency Accounts
               </h3>
-              <p className="font-inter text-sm font-normal md:w-[65%] text-[#525866] mb-6">
+              <p className="font-inter text-sm font-light md:w-[65%] text-[#525866] mb-6">
                 Expand your global presence by setting up accounts in USD, EUR,
                 and GBP. Gain easy access to cross-border transactions and
                 minimize currency conversion fees, enhancing the efficiency of
@@ -61,10 +61,10 @@ export default function FeatureSection() {
               <span className="text-xs bg-[#8FC0F7] text-[#064083] px-2 py-1 rounded-full inline-block mb-4">
                 Invoicing
               </span>
-              <h3 className="text-2xl font-fraunces w-[65%] font-normal text-[#064083] mb-4">
+              <h3 className="text-2xl font-fraunces w-[65%] font-extralight text-[#064083] mb-4">
                 Efficient Invoicing Solutions
               </h3>
-              <p className="font-inter text-sm font-normal md:w-[65%] text-[#525866] mb-6">
+              <p className="font-inter text-sm font-light md:w-[65%] text-[#525866] mb-6">
                 Generate customized invoices for clients around the world. Offer
                 billing in multiple currencies, automatic payment reminders, and
                 streamline your invoicing process to maintain healthy cash flow.
@@ -101,10 +101,10 @@ export default function FeatureSection() {
               <span className="text-xs bg-[#BFE8E0] text-[#046D62] px-2 py-1 rounded-full inline-block mb-4">
                 Multi-Currency Wallet
               </span>
-              <h3 className="text-2xl font-fraunces w-[65%] font-normal text-[#046D62] mb-4">
+              <h3 className="text-2xl font-fraunces w-[65%] font-extralight text-[#046D62] mb-4">
                 Send & Receive Money Globally
               </h3>
-              <p className="font-inter text-sm font-normal lg:w-[35%] text-[#525866] mb-6">
+              <p className="font-inter text-sm font-light lg:w-[35%] text-[#525866] mb-6">
                 Send and receive payments seamlessly across 80+ countries.
                 Leverage our deep liquidity to execute swift and secure
                 transfers, ensuring your business can operate without
@@ -142,10 +142,10 @@ export default function FeatureSection() {
               <span className="text-xs bg-[#D0D4FA] text-[#5F29B3] px-2 py-1 rounded-full inline-block mb-4">
                 Virtual Cards
               </span>
-              <h3 className="text-2xl font-fraunces w-[65%] font-normal text-[#5F29B3] mb-4">
+              <h3 className="text-2xl font-fraunces w-[65%] font-extralight text-[#5F29B3] mb-4">
                 Virtual Cards for Business Management
               </h3>
-              <p className="font-inter text-sm font-normal md:w-[65%] text-[#525866] mb-6">
+              <p className="font-inter text-sm font-light md:w-[65%] text-[#525866] mb-6">
                 Issue virtual cards for your team to easily manage expenses.
                 Control spending, track usage, and simplify budget
                 management—all from a centralized platform tailored for your
@@ -173,21 +173,19 @@ export default function FeatureSection() {
           >
             <div className="relative z-10 p-6">
               <span className="text-xs bg-[#ECD46B] text-[#99840C] px-2 py-1 rounded-full inline-block mb-4">
-                CFS
+                CTM
               </span>
-              <h3 className="text-2xl font-fraunces w-[65%] font-normal text-[#99840C] mb-4">
-                Corporate Field Strategy
+              <h3 className="text-2xl font-fraunces w-[65%] font-extralight text-[#99840C] mb-4">
+                Corporate Treasury Management{" "}
               </h3>
-              <p className="font-inter text-sm font-normal md:w-[65%] text-[#525866] mb-6">
-                By leveraging digital assets tied to stable value, companies can
-                maintain a balance between liquidity, stability, and modest
-                yield generation while minimizing exposure to broader market
-                volatility
+              <p className="font-inter text-sm font-light md:w-[65%] text-[#525866] mb-6">
+                Leverage digital assets as part of your treasury management
+                including liquidity and yield generation strategies.
               </p>
               <div className="flex space-x-4">
                 <div className="relative group">
                   <button className="bg-transparent border border-[#99840C] text-[#99840C] px-4 py-2 rounded-lg hover:bg-[#99840C] hover:text-white">
-                    Explore CFS
+                    Explore CTM
                   </button>
                   <span className="absolute top-full left-0 mt-2 px-4 py-1 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition duration-300 w-full text-center">
                     Beta Coming Soon

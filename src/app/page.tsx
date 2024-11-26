@@ -155,18 +155,18 @@ export default function HomePage() {
           {/* Animated Text Section */}
           <div className="relative md:h-52 overflow-hidden flex items-end justify-center">
             {/* First Text */}
-            <h1 className="absolute  font-fraunces w-full text-4xl md:text-6xl font-light leading-tight text-white animate-text-slide-1">
+            <h1 className="absolute  font-fraunces w-full text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-1">
               Enable <span className="text-[#0040C2]">Equitable Access</span> to
               Global Financial Markets
             </h1>
 
             {/* Second Text */}
-            <h1 className="absolute font-fraunces w-full text-4xl md:text-6xl font-light leading-tight text-white animate-text-slide-2">
+            <h1 className="absolute font-fraunces w-full text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-2">
               Borderless <span className="text-[#0040C2]">Transfer</span>
             </h1>
 
             {/* Third Text */}
-            <h1 className="absolute font-fraunces w-full text-4xl md:text-6xl font-light leading-tight text-white animate-text-slide-3">
+            <h1 className="absolute font-fraunces w-full text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-3">
               Empower <span className="text-[#0040C2]">Enterprises</span> with
               Seamless Trans-Border Payments
             </h1>
@@ -203,24 +203,29 @@ export default function HomePage() {
         </div>
       </section>
       <section className="bg-white h-screen mt-4">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           {/* Text Block */}
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-[#c2bcf6] font-fraunces">
-              <span className="text-blue-600 font-medium">Our</span> solutions
-              simplify your cross-border payment needs, help you to manage your
-              treasury, while providing access to deep FX liquidity
+          <div className="text-center max-w-2xl mt-5 mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-extralight font-fraunces relative overflow-hidden">
+              <span className="text-blue-600 font-extralight ">Our</span>
+              <span className="ml-1 text-[#c2bcf6] font-extralight animate-fade transition-colors[animation-delay:1s]">
+                solutions simplify your cross-border payment needs, help you to
+                manage your treasury, while providing access to deep FX
+                liquidity
+              </span>
             </h2>
           </div>
 
           {/* Chart Card */}
-          <Image
-            src="/images/dashboard-new.svg"
-            width={1280}
-            height={645}
-            alt="Logo"
-            className=""
-          />
+          <div className="flex justify-center">
+            <Image
+              src="/images/dashboard-new.svg"
+              width={1280}
+              height={645}
+              alt="Logo"
+              className="mx-auto"
+            />
+          </div>
         </div>
       </section>
       <section>
