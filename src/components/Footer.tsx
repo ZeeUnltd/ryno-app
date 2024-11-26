@@ -2,15 +2,18 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-black text-white pt-32 pb-16">
-      <div className="text-center mb-96">
-        <h2 className="text-4xl font-fraunces text-white">
-          We are live in <br /> 50 Countries
-        </h2>
-        <div className="relative h-96 mx-auto max-w-4xl"></div>
-      </div>
+    <footer
+      className="relative bg-black text-white pt-32 pb-16"
+      // style={{
+      //   backgroundImage: `url('/images/global-background.svg')`, // Path to your global background image
+      //   backgroundSize: "contain", // Use 'contain' or a smaller percentage for reduced size
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat", // Prevent tiling
+      //   width: "100%", // Maintain full footer width
+      // }}
+    >
       <div
-        className="absolute  top-56"
+        className="absolute inset-0"
         style={{
           backgroundImage: `url('/images/global-background.svg')`,
           backgroundSize: "contain",
@@ -21,29 +24,31 @@ const Footer = () => {
         }}
       />
       {/* "We Are Live In" Section */}
+      <div className="text-center mb-96">
+        <h2 className="text-4xl font-fraunces text-white mb-48">
+          We are live in <br /> 50+ Countries
+        </h2>
+        <div className="relative h-96 mx-auto max-w-4xl"></div>
+      </div>
 
-      {/* <div
+      {/* "Let’s Work Together" Section */}
+      <div
         className="relative bg-[#0040C2] text-white py-16 px-8 rounded-xl mx-auto max-w-6xl mb-24 bg-cover bg-center"
         style={{
           backgroundImage: "url('/images/new-blue-footer.svg')",
-          backgroundSize: "contain", 
+          backgroundSize: "contain", // Ensures the background scales proportionally
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
         }}
       >
+        {/* Content */}
         <div className="relative z-10">
           <h3 className="text-3xl font-fraunces font-light text-center mb-6">
             Let’s Work Together
           </h3>
-          <p className="text-center text-sm font-normal font-inter max-w-3xl mx-auto mb-2">
-            Join the growing number of African enterprises that trust Ryno for
-            their financial needs.
-          </p>
-          <p className="text-center text-sm font-normal font-inter max-w-3xl mx-auto mb-8">
-            Get in touch to learn more about how we can help your business
-            thrive.
-          </p>
+
           <div className="flex justify-center space-x-6">
+            {/* Contact Sales Button with Tooltip */}
             <div className="relative group">
               <button className="bg-transparent border border-white px-8 py-3 rounded-lg text-white hover:bg-white hover:text-[#1B3F81]">
                 Contact Sales
@@ -52,6 +57,8 @@ const Footer = () => {
                 Beta Coming Soon
               </span>
             </div>
+
+            {/* Create Account Button with Tooltip */}
             <div className="relative group">
               <button className="flex items-center bg-[#FFF] text-[#0040C2] px-6 py-3 rounded-lg hover:bg-blue-700 hover:text-white transition duration-300">
                 <span className="mr-2">Create Account</span>
@@ -69,8 +76,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div> */}
-      <div className="py-16"></div>
+      </div>
+
       {/* Footer Content */}
       <div className="text-center mb-16">
         <Image
@@ -84,17 +91,17 @@ const Footer = () => {
         <p className="text-[#999999] text-base mb-4">Products</p>
         <div className="flex justify-center space-x-8 mb-12">
           <a href="#" className="text-sm hover:underline">
-            IBAN Accounts
+            IBAN Accounts{" "}
           </a>
           <a href="#" className="text-sm hover:underline">
             Invoicing
           </a>
           <a href="#" className="text-sm hover:underline">
-            Multi-Currency Payout{" "}
+            Multi-Currency Payout
           </a>
           <a href="#" className="text-sm hover:underline">
             Virtual Cards{" "}
-          </a>{" "}
+          </a>
           <a href="#" className="text-sm hover:underline">
             Corporate Treasury Management{" "}
           </a>
@@ -105,26 +112,18 @@ const Footer = () => {
       <div className="border-t border-gray-700 pt-8 mt-8 text-sm text-gray-400 text-start w-[80%] mx-auto flex flex-col lg:flex-row justify-between">
         <div className="w-full md:w-[35%] ">
           <p className="mb-6">
-            Rhyno Financial Inc. (ryno) is a global technology company
-            registered in Alberta, Canada, and is authorized by the Financial
-            Transactions and Reports Analysis Centre of Canada (FINTRAC) MSB No.
-            C100000021
+            Rhyno Financial (ryno) is authorized by the Financial Transactions
+            and Reports Analysis Centre of Canada (FINTRAC) for processing money
+            transferring and payment services under Money Services Business
+            (MSB). MSB registration number: <strong>C100000021</strong>. Ryno is
+            a licensed entity in the government of Alberta (Corporate Access
+            Number: 2026336632).
           </p>
           <p className="mt-6 text-gray-500">
             © 2024 ryno • Privacy Policy • Terms of Service
           </p>
         </div>
         <div className="flex flex-col items-center lg:items-end">
-          <div>
-            <Image
-              src="/images/fintrac.jpeg"
-              alt="fintrac"
-              width={224}
-              height={24}
-              className="text-end"
-            />
-          </div>
-
           <div className="grid grid-cols-2 gap-2 sm:gap-4 sm:grid-cols-2 justify-center bg-black py-6">
             <a
               href="https://www.linkedin.com/company/ryno-pay/"
