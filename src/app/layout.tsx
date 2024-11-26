@@ -3,7 +3,7 @@ import "./globals.css";
 import { Fraunces } from "@next/font/google";
 
 export const metadata: Metadata = {
-  title: "RynoPay Web Application",
+  title: "ryno borderless Financial for Emerging Markets",
   description:
     "Simplifying cross-border transactions and fuelling business growth with innovative financial solutions.",
 };

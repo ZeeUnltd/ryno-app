@@ -142,9 +142,9 @@ export default function HomePage() {
         </div>
 
         {/* Content Layer */}
-        <div className="z-10 max-w-4xl text-white container py-6 pl-16">
+        <div className="z-10 max-w-4xl mb-28 text-white container py-6 pl-16">
           {/* Animated Text Section */}
-          <div className="relative md:h-52 overflow-hidden flex items-end justify-center">
+          <div className="relative md:h-64 overflow-hidden flex items-end justify-center">
             {/* First Text */}
             <h1 className="absolute  font-fraunces w-full text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-1">
               Enable <span className="text-[#0040C2]">Equitable Access</span> to
@@ -153,13 +153,13 @@ export default function HomePage() {
 
             {/* Second Text */}
             <h1 className="absolute font-fraunces w-full text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-2">
-              Borderless <span className="text-[#0040C2]">Transfer</span>
+              Borderless <span className="text-[#0040C2]">Finance</span>
             </h1>
 
             {/* Third Text */}
-            <h1 className="absolute font-fraunces w-full text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-3">
-              Empower <span className="text-[#0040C2]">Emerging</span> with
-              Market Seamless Via Cross-Boarder Payment
+            <h1 className="absolute font-fraunces w-full capitalize text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-3">
+              Empower <span className="text-[#0040C2]">Emerging</span> Market
+              Enterprises with seamless Cross Border Payment Services
             </h1>
           </div>
 
@@ -176,7 +176,7 @@ export default function HomePage() {
             </button>
             <div className="relative group">
               <button className="flex items-center bg-[#0040C2] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 w-full">
-                <span className="mr-2">Create an account</span>
+                <span className="mr-2">Create Account</span>
                 <Image
                   src="/icons/navigation-icon.svg"
                   height={14}

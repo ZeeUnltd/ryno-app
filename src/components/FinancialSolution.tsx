@@ -14,7 +14,7 @@ export default function FinancialSolutionsSection() {
       <div className="relative z-10 text-center max-w-3xl text-white px-4">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-fraunces font-extralight leading-tight mb-6">
-          Borderless Financial for <br /> Emerging Markets
+          Borderless Finance for <br /> Emerging Markets
         </h2>
 
         {/* Subtitle */}
