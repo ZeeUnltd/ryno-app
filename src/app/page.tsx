@@ -73,63 +73,54 @@ export default function HomePage() {
   return (
     <div className="relative">
       <header className="w-full bg-transparent absolute top-0 font-inter z-50">
-        <nav className="container mx-auto flex items-center py-6 px-4">
+        <nav className="container mx-auto flex items-center justify-between py-4 px-6">
+          {/* Logo Section */}
           <div className="flex items-center space-x-4">
             <Image
               src="/icons/logo_new_light.svg"
               width={260}
               height={160}
               alt="Logo"
-              className="h-8"
             />
-          </div>
-          <div className="flex justify-between w-full items-center">
+
             <ul className="hidden md:flex text-base font-normal space-x-6 text-white">
               <li>
                 <a href="#home" className="hover:text-blue-400">
                   Home
                 </a>
               </li>
-              {/* <li>
-                <a href="#solutions" className="hover:text-blue-400">
-                  Solutions
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-blue-400">
-                  About
-                </a>
-              </li> */}
             </ul>
-            <div className="space-x-4 flex items-center hidden sm:flex">
-              <div className="flex space-x-4">
-                {/* Sign In Button */}
-                <div className="relative group w-fit">
-                  <button className="text-white border pt-2 pb-2.5 px-4 border-[#FFFFFF] rounded-md hover:text-blue-400 w-full">
-                    Sign In
-                  </button>
-                  <span className="absolute top-full left-0 mt-2 px-4 py-1 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition duration-300 w-full text-center">
-                    Beta Coming Soon
-                  </span>
-                </div>
+          </div>
 
-                {/* Create Account Button */}
-                <div className="relative group w-fit">
-                  <button className="flex items-center bg-[#0040C2] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 w-full">
-                    <span className="mr-2">Create Account</span>
-                    <Image
-                      src="/icons/navigation-icon.svg"
-                      height={14}
-                      width={14}
-                      alt="navigate-icon"
-                      className="inline-block"
-                    />
-                  </button>
-                  <span className="absolute top-full left-0 mt-2 px-6 py-1 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition duration-300 w-full text-center">
-                    Beta Coming Soon
-                  </span>
-                </div>
-              </div>
+          {/* Navigation Links */}
+
+          {/* Buttons Section */}
+          <div className="flex space-x-4 items-center">
+            {/* Sign In Button */}
+            <div className="relative group w-fit">
+              <button className="text-white border py-1.5 px-4 border-[#FFFFFF] rounded-md hover:text-blue-400">
+                Sign In
+              </button>
+              <span className="absolute top-full left-0 mt-2 px-4 py-1 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition duration-300 w-full text-center">
+                Beta Coming Soon
+              </span>
+            </div>
+
+            {/* Create Account Button */}
+            <div className="relative group w-fit">
+              <button className="flex items-center bg-[#0040C2] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                <span className="mr-2">Create Account</span>
+                <Image
+                  src="/icons/navigation-icon.svg"
+                  height={14}
+                  width={14}
+                  alt="navigate-icon"
+                  className="inline-block"
+                />
+              </button>
+              <span className="absolute top-full left-0 mt-2 px-6 py-1 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition duration-300 w-full text-center">
+                Beta Coming Soon
+              </span>
             </div>
           </div>
         </nav>
@@ -167,22 +158,21 @@ export default function HomePage() {
 
             {/* Third Text */}
             <h1 className="absolute font-fraunces w-full text-4xl md:text-6xl font-extralight leading-tight text-white animate-text-slide-3">
-              Empower <span className="text-[#0040C2]">Enterprises</span> with
-              Seamless Trans-Border Payments
+              Empower <span className="text-[#0040C2]">Emerging</span> with
+              Market Seamless Via Cross-Boarder Payment
             </h1>
           </div>
 
           {/* Supporting Text */}
           <p className=" text-base font-normal font-inter leading-relaxed">
-            Providing equitable access to global financial markets with
-            cutting-edge technology that removes complexities and delivers
-            seamless, deep liquidity solutions.
+            Providing emerging markets enterprises equitable access to global
+            financial markets with cutting edge technology.
           </p>
 
           {/* Buttons */}
           <div className="mt-8 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <button className="bg-transparent border border-white px-6 py-3 rounded-lg hover:bg-blue-600">
-              Contact us
+              Contact Us
             </button>
             <div className="relative group">
               <button className="flex items-center bg-[#0040C2] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 w-full">
@@ -209,8 +199,8 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-extralight font-fraunces relative overflow-hidden">
               <span className="text-blue-600 font-extralight ">Our</span>
               <span className="ml-1 text-[#c2bcf6] font-extralight animate-fade transition-colors[animation-delay:1s]">
-                solutions simplify your cross-border payment needs, help you to
-                manage your treasury, while providing access to deep FX
+                solutions provide seamless and compliant cross border
+                transactions, treasury management, and access to deep FX
                 liquidity
               </span>
             </h2>
