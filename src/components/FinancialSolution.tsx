@@ -14,7 +14,7 @@ export default function FinancialSolutionsSection() {
       <div className="relative z-10 text-center max-w-3xl text-white px-4">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-fraunces font-extralight leading-tight mb-6">
-          Borderless Financial Solutions for <br /> Emerging Markets
+          Borderless Financial for <br /> Emerging Markets
         </h2>
 
         {/* Subtitle */}
@@ -26,10 +26,10 @@ export default function FinancialSolutionsSection() {
         </h3>
         {/* Paragraph */}
         <p className="text-sm md:text-lg font-inter leading-relaxed">
-          Extend your business&#39;s reach globally with seamless access to
-          cross-border transfers, tailored FX payments, multi-currency exchange,
-          and hassle-free payment collections—all designed specifically for
-          enterprises in emerging markets.
+          Extend your enterprise reach globally with seamless access to super
+          fast cross border transactions, tailored FX payments, multi-currency
+          payouts, and hassle free payment collections — all uniquely designed
+          for enterprises in emerging markets
         </p>
       </div>
     </section>
