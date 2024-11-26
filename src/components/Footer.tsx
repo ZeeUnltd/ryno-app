@@ -4,14 +4,27 @@ const Footer = () => {
   return (
     <footer
       className="relative bg-black text-white pt-32 pb-16"
-      style={{
-        backgroundImage: `url('/images/global-background.svg')`, // Path to your global background image
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      // style={{
+      //   backgroundImage: `url('/images/global-background.svg')`, // Path to your global background image
+      //   backgroundSize: "contain", // Use 'contain' or a smaller percentage for reduced size
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat", // Prevent tiling
+      //   width: "100%", // Maintain full footer width
+      // }}
     >
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url('/images/global-background.svg')`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "90%",
+          width: "100%",
+        }}
+      />
       {/* "We Are Live In" Section */}
-      <div className="text-center mb-24">
+      <div className="text-center mb-96">
         <h2 className="text-4xl font-fraunces text-white mb-12">
           We are live in <br /> 39 Countries
         </h2>
@@ -22,12 +35,12 @@ const Footer = () => {
       <div
         className="relative bg-[#0040C2] text-white py-16 px-8 rounded-xl mx-auto max-w-6xl mb-24 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/pattern-new.svg')", // Replace with your image path
+          backgroundImage: "url('/images/new-blue-footer.svg')",
+          backgroundSize: "contain", // Ensures the background scales proportionally
+          backgroundPosition: "bottom",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3F81] to-transparent opacity-90 rounded-xl"></div>
-
         {/* Content */}
         <div className="relative z-10">
           <h3 className="text-3xl font-fraunces font-light text-center mb-6">
@@ -38,7 +51,6 @@ const Footer = () => {
             their financial needs.
           </p>
           <p className="text-center text-sm font-normal font-inter max-w-3xl mx-auto mb-8">
-            {" "}
             Get in touch to learn more about how we can help your business
             thrive.
           </p>

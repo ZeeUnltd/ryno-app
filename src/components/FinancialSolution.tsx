@@ -13,7 +13,7 @@ export default function FinancialSolutionsSection() {
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl text-white px-4">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-fraunces font-light leading-tight mb-6">
+        <h2 className="text-4xl md:text-5xl font-fraunces font-extralight leading-tight mb-6">
           Borderless Financial Solutions for <br /> Emerging Markets
         </h2>
 
@@ -21,7 +21,7 @@ export default function FinancialSolutionsSection() {
 
         {/* Divider */}
         <hr className="border-t border-gray-400 w-full mx-auto mb-6" />
-        <h3 className="text-lg md:text-xl font-fraunces font-light mb-4">
+        <h3 className="text-lg md:text-xl font-fraunces font-extralight mb-4">
           Global Financial Access
         </h3>
         {/* Paragraph */}
