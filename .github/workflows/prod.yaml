@@ -1,0 +1,29 @@
+name: "rynopay_client_site_prod_pipeline"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-push-image-to-ECR:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Login to ECR
+      id: ecr_login
+      uses: docker/login-action@v3
+      with:
+        registry: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com
+        username: ${{ secrets.ECR_IAM_ACCESS_KEY_ID }}
+        password: ${{ secrets.ECR_IAM_SECRET_ACCESS_KEY }}
+
+    - name: Build and push to ECR
+      id: docker_build
+      uses: docker/build-push-action@v5.3.0
+      with:
+        context: ./
+        file: ./Dockerfile
+        push: true
+        tags: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/rynopay_prod/client_site:prod
