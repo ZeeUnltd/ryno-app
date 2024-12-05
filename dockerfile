@@ -39,7 +39,7 @@ COPY --from=builder /app/package.json ./
 EXPOSE 3000
 
 # 11. Set environment variables if needed (e.g., production mode)
-ENV NODE_ENV production
+#ENV NODE_ENV production
 
 # 12. Start the Next.js app
 CMD ["npm", "start"]
