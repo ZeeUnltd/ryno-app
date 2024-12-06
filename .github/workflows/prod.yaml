@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  #AWS_REGION: MY_AWS_REGION                   # set this to your preferred AWS region, e.g. us-west-1
+  AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
   #ECR_REPOSITORY: MY_ECR_REPOSITORY           # set this to your Amazon ECR repository name
   ECS_SERVICE: prod_website                 # set this to your Amazon ECS service name
   ECS_CLUSTER: Rynopay_Website                 # set this to your Amazon ECS cluster name
@@ -20,6 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
+    - name: Configure AWS credentials #This credential should have ECS permissions
+      uses: aws-actions/configure-aws-credentials@0e613a0980cbf65ed5b322eb7a1e075d28913a83
+      with:
+        aws-access-key-id: ${{ secrets.ECR_IAM_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.ECR_IAM_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
     
     - name: Login to ECR
       id: ecr_login
@@ -36,7 +43,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/rynopay_prod/client_site:prod
+        tags: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/rynopay_prod/client_site:${{ github.sha }}
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
@@ -44,7 +51,7 @@ jobs:
       with:
         task-definition: ${{ env.ECS_TASK_DEFINITION }}
         container-name: ${{ env.CONTAINER_NAME }}
-        image: ${{ steps.build-image.outputs.image }}
+        image: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/rynopay_prod/client_site:${{ github.sha }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@df9643053eda01f169e64a0e60233aacca83799a
