@@ -99,7 +99,9 @@ export default function HomePage() {
             {/* Sign In Button */}
             <div className="relative group w-fit">
               <button className="text-white border py-1.5 px-4 border-[#FFFFFF] rounded-md hover:text-blue-400">
-                Sign In
+                <a href={`${process.env.NEXT_PUBLIC_APP_BASE_URL}/login`}>
+                  Sign In
+                </a>
               </button>
               <span className="absolute top-full left-0 mt-2 px-4 py-1 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition duration-300 w-full text-center">
                 Beta Coming Soon
@@ -109,7 +111,13 @@ export default function HomePage() {
             {/* Create Account Button */}
             <div className="relative group w-fit">
               <button className="flex items-center bg-[#0040C2] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
-                <span className="mr-2">Create Account</span>
+                <span className="mr-2">
+                  <a
+                    href={`${process.env.NEXT_PUBLIC_APP_BASE_URL}/signup`}
+                  >
+                    Create Account
+                  </a>
+                </span>
                 <Image
                   src="/icons/navigation-icon.svg"
                   height={14}
