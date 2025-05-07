@@ -7,6 +7,9 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Manrope', 'sans-serif'], // Set Manrope as the default sans font
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -20,20 +23,21 @@ const config: Config = {
         aeonik_regular: ["Aeonik-Regular", "sans-serif"],
         aeonik_medium: ["Aeonik-Medium", "sans-serif"],
         fraunces: ["var(--font-fraunces)", "serif"],
+        manrope: ["Manrope", "sans-serif"], // Add Manrope to available fonts
       },
       keyframes: {
         "text-slide-1": {
-          "0%, 33.33%": { transform: "translateY(0%)", opacity: "1" }, // First text appears
-          "41.66%, 100%": { transform: "translateY(-100%)", opacity: "0" }, // Slide out
+          "0%, 33.33%": { transform: "translateY(0%)", opacity: "1" },
+          "41.66%, 100%": { transform: "translateY(-100%)", opacity: "0" },
         },
         "text-slide-2": {
-          "0%, 33.33%": { transform: "translateY(100%)", opacity: "0" }, // Offscreen below
-          "41.66%, 66.66%": { transform: "translateY(0%)", opacity: "1" }, // Slide in and stay
-          "74.99%, 100%": { transform: "translateY(-100%)", opacity: "0" }, // Slide out
+          "0%, 33.33%": { transform: "translateY(100%)", opacity: "0" },
+          "41.66%, 66.66%": { transform: "translateY(0%)", opacity: "1" },
+          "74.99%, 100%": { transform: "translateY(-100%)", opacity: "0" },
         },
         "text-slide-3": {
-          "0%, 66.66%": { transform: "translateY(100%)", opacity: "0" }, // Offscreen below
-          "74.99%, 100%": { transform: "translateY(0%)", opacity: "1" }, // Slide in and stay
+          "0%, 66.66%": { transform: "translateY(100%)", opacity: "0" },
+          "74.99%, 100%": { transform: "translateY(0%)", opacity: "1" },
         },
         fade: {
           "0%": { color: "#c2bcf6" },
