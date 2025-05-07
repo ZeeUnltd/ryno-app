@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function LandingPage () {
-
+export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
@@ -80,103 +79,101 @@ export default function LandingPage () {
           boxShadow: hasScrolled ? "0 1px 3px rgba(0, 0, 0, 0.1)" : "none",
         }}
       >
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <Image
-              onClick={() => scrollToSection("hero")}
-              src="/icons/logo_new_light.svg"
-              alt="Ryno Logo"
-              width={180}
-              height={32}
-              className="mx-auto mb-6"
-            />
+        <div
+          className="container mx-auto px-4 py-4 flex justify-between items-center h-32
+        "
+        >
+          <div className="flex items-center w-9/12">
+            {hasScrolled ? (
+              <Image
+                onClick={() => scrollToSection("hero")}
+                src="/logo/rynopay_logo.svg"
+                alt="Ryno Logo"
+                height={47}
+                width={`${200}`}
+                className="w-auto"
+              />
+            ) : (
+              <Image
+                onClick={() => scrollToSection("hero")}
+                src="/icons/logo_new_light.svg"
+                alt="Ryno Logo"
+                width={200}
+                height={47}
+                className="w-auto"
+              />
+            )}
+
+            {/* Menu buttons moved here, next to the logo */}
+            <div className="hidden md:flex items-center space-x-6 ml-6">
+              <button
+                onClick={() => scrollToSection("features")}
+                className={`${
+                  hasScrolled ? "text-gray-700" : "text-white"
+                } hover:text-blue-600 transition-colors`}
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection("how-it-works")}
+                className={`${
+                  hasScrolled ? "text-gray-700" : "text-white"
+                } hover:text-blue-600 transition-colors`}
+              >
+                Solutions
+              </button>
+              <button
+                onClick={() => scrollToSection("testimonials")}
+                className={`${
+                  hasScrolled ? "text-gray-700" : "text-white"
+                } hover:text-blue-600 transition-colors`}
+              >
+                Tools
+              </button>
+              <button
+                onClick={() => scrollToSection("pricing")}
+                className={`${
+                  hasScrolled ? "text-gray-700" : "text-white"
+                } hover:text-blue-600 transition-colors`}
+              >
+                Pricing
+              </button>
+            </div>
           </div>
 
-          {/* Desktop Navigation - Updated text color based on scroll */}
-          <div className="hidden md:flex items-center space-x-8 ml-8">
-            <button
-              onClick={() => scrollToSection("features")}
-              className={`${
-                hasScrolled ? "text-gray-700" : "text-white"
-              } hover:text-blue-600 transition-colors`}
-            >
-              Features
-            </button>
-            <button
-              onClick={() => scrollToSection("how-it-works")}
-              className={`${
-                hasScrolled ? "text-gray-700" : "text-white"
-              } hover:text-blue-600 transition-colors`}
-            >
-              How It Works
-            </button>
-            <button
-              onClick={() => scrollToSection("testimonials")}
-              className={`${
-                hasScrolled ? "text-gray-700" : "text-white"
-              } hover:text-blue-600 transition-colors`}
-            >
-              Testimonials
-            </button>
-            <button
-              onClick={() => scrollToSection("pricing")}
-              className={`${
-                hasScrolled ? "text-gray-700" : "text-white"
-              } hover:text-blue-600 transition-colors`}
-            >
-              Pricing
-            </button>
+          {/* Login button moved to its own div */}
+          <div className="hidden md:block w-2/12 whitespace-nowrap">
             <Link
               href="/login"
-              className={`px-6 py-2 ${
-                hasScrolled
-                  ? "bg-gray-100 text-gray-800"
-                  : "bg-blue-950 bg-opacity-20 text-white"
-              } rounded-lg hover:bg-gray-200 transition-colors`}
+              className="flex flex-row justify-center items-center px-3 py-2.5 gap-1 m-auto w-[141px] h-[44px] bg-white border border-[#0040C2] shadow-[0px_1px_2px_rgba(14,18,27,0.03)] rounded-xl"
             >
-              Login
+              <span className="flex items-center justify-center gap-1 text-primary">
+                Get Started
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.25 14.25L13.75 6.75"
+                    stroke="#0040C2"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.25 6.75H13.75V14.25"
+                    stroke="#0040C2"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
             </Link>
           </div>
-
-          {/* Mobile Menu Button - Updated color based on scroll */}
-          <button
-            className={`md:hidden ${
-              hasScrolled ? "text-gray-700" : "text-white"
-            }`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
         </div>
 
         {/* Mobile Menu */}
@@ -234,7 +231,7 @@ export default function LandingPage () {
           backgroundImage: "url('/images/landing-backdrop.png')",
         }}
       >
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto px-4 py-4 mt-16 lg:mt-[50vh]">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
               <motion.h1
@@ -243,36 +240,8 @@ export default function LandingPage () {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Seamless Cross-Border Payments for Your Business
+                Cross-Border Payments Powered by Stablecoins
               </motion.h1>
-              <motion.p
-                className="text-lg md:text-xl text-gray-200 mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                Ryno helps businesses send and receive payments globally with
-                lower fees, faster processing, and better exchange rates.
-              </motion.p>
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                <Link
-                  href="/signup"
-                  className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center font-medium"
-                >
-                  Get Started for Free
-                </Link>
-                <button
-                  onClick={() => scrollToSection("how-it-works")}
-                  className="px-8 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-center font-medium"
-                >
-                  See How It Works
-                </button>
-              </motion.div>
             </div>
             <div className="md:w-1/2">
               <motion.div
@@ -281,16 +250,23 @@ export default function LandingPage () {
                 transition={{ duration: 0.7 }}
                 className="relative"
               >
-                <Image
-                  src="/hero-image.png"
-                  alt="Ryno Platform Dashboard"
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-2xl"
-                />
-                <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
-                  <p className="font-bold">Save up to 70%</p>
-                  <p className="text-sm">on international transfers</p>
+                <div className="">
+                  <motion.p
+                    className="text-lg md:text-xl text-gray-200 mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    <span className="font-thin">
+                      Ryno is a global fintech company that gives businesses in
+                      emerging markets a fast, compliant way to move and manage
+                      money across borders{" "}
+                      <span className="">
+                        — using stablecoins for cost-effective payments and
+                        liquidity at scale.
+                      </span>
+                    </span>
+                  </motion.p>
                 </div>
               </motion.div>
             </div>
@@ -300,11 +276,17 @@ export default function LandingPage () {
 
       {/* Trusted By Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto max-w-6xl px-4">
-          <p className="text-center text-gray-500 mb-8">
-            Trusted by businesses worldwide
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <div className="container mx-auto max-w-6xl px-4 text-center w-full">
+        <motion.h2
+              className="text-3xl md:text-4xl font-normal text-gray-900 mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              Why Choose ryno?
+            </motion.h2>
+          {/* <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {[
               "company1.svg",
               "company2.svg",
@@ -327,6 +309,47 @@ export default function LandingPage () {
                 />
               </motion.div>
             ))}
+          </div> */}
+          <div className="w-full flex justify-center items-center">
+            <div className="text-sm lg:w-6/12 text-center text-gray-500 my-8">
+              Ryno bridges the gap between stablecoin technology and real-world
+              business needs in emerging markets — with a secure, compliant, and
+              enterprise-ready platform.
+            </div>
+          </div>
+          <div className="flex justify-center items-center w-full">
+            <div className="block w-2/12 whitespace-nowrap">
+              <Link
+                href="/login"
+                className="flex flex-row justify-center items-center px-3 py-2.5 gap-1 m-auto w-[241px] h-[44px] bg-primary border border-[#0040C2] text-white shadow-[0px_1px_2px_rgba(14,18,27,0.03)] rounded-xl"
+              >
+                <span className="flex items-center justify-center gap-1">
+                  Get Started
+                  <svg
+                    width="20"
+                    height="21"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.25 14.25L13.75 6.75"
+                      stroke="#ffffff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.25 6.75H13.75V14.25"
+                      stroke="#ffffff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -414,6 +437,10 @@ export default function LandingPage () {
           </div>
         </div>
       </section>
+
+      <section>
+        
+      </section>
     </main>
-    );
-  }
+  );
+}

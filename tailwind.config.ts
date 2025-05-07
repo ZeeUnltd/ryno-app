@@ -11,6 +11,9 @@ const config: Config = {
       sans: ['Manrope', 'sans-serif'], // Set Manrope as the default sans font
     },
     extend: {
+      colors: {
+        primary: 'var(--color-primary)',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -44,6 +47,14 @@ const config: Config = {
           "50%": { color: "#0040C2" },
           "100%": { color: "#0040C2" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        pulse: {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.7", transform: "scale(1.05)" },
+        },
       },
       animation: {
         "text-slide-1":
@@ -52,7 +63,9 @@ const config: Config = {
           "text-slide-2 9s cubic-bezier(0.83, 0, 0.17, 1) infinite",
         "text-slide-3":
           "text-slide-3 9s cubic-bezier(0.83, 0, 0.17, 1) infinite",
-        fade: "fade 5s linear forwards",
+        "fade": "fade 3s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "pulse": "pulse 2s ease-in-out infinite",
       },
     },
   },
