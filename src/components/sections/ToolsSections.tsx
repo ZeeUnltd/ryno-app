@@ -38,7 +38,7 @@ const CardItem: React.FC<{
             width={307}
             height={203}
             className={`h-full ${
-              different ? "absolute -bottom-8  -right-16 scale-150" : "w-auto"
+              different ? 'absolute -bottom-8  -right-16 scale-150' : 'w-auto'
             }`}
           />
         </div>
