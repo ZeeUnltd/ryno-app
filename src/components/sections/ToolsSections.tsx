@@ -13,11 +13,11 @@ const CardItem: React.FC<{
   icon: string;
   className?: string;
   different?: boolean;
-}> = ({ title, description, icon, className, different=false }) => {
+}> = ({ title, description, icon, className, different = false }) => {
   return (
     <>
       <motion.div
-        className={`p-6 text-primary border rounded-3xl border-primary text-left overflow-hidden h-[264px] pt ${className}`}
+        className={`p-6 text-primary border rounded-3xl border-primary text-left overflow-hidden h-[264px] ${className}`}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
@@ -30,8 +30,7 @@ const CardItem: React.FC<{
         }}
       >
         <div
-          className={`w-full text-left relative  ${
-            different ? "" : "my-8"}`}
+          className={`w-full text-left relative  ${different ? "" : "my-8"}`}
         >
           <Image
             src={icon}
@@ -75,8 +74,7 @@ const ToolsSection: React.FC<ToolsSectionrops> = () => {
               viewport={{ once: true }}
             >
               Power your operations with Ryno's tools designed for seamless
-              conversion, global payouts, and real-time financial management.
-            </motion.p>
+              conversion, global payouts, and real-time financial management.{" "}</motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
@@ -87,7 +85,7 @@ const ToolsSection: React.FC<ToolsSectionrops> = () => {
                   "Convert fiat and digital currencies seamlessly with our secure infrastructure.",
                 icon: "/icons/ToolsPage-1.svg",
                 className: "flex flex-row bg-[#F6F9FF] flex-row-reverse pt-36",
-                different: true
+                different: true,
               },
               {
                 title: "Global Payout Engine",
@@ -95,7 +93,7 @@ const ToolsSection: React.FC<ToolsSectionrops> = () => {
                   "Effortlessly pay globally with Ryno's scalable payout engine",
                 icon: "/icons/ToolsPage-2.svg",
                 className: "bg-primary text-white flex flex-row-reverse pt-36",
-                different: true
+                different: true,
               },
               {
                 title: "Embedded Wallet Account",
@@ -128,4 +126,5 @@ const ToolsSection: React.FC<ToolsSectionrops> = () => {
       </section>
     </>
   );
-};export default ToolsSection;
+};
+export default ToolsSection;
