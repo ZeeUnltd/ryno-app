@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import GetStartedButton from "../GetStartedButton";
-interface SolutionsSectionrops {
+interface ToolsSectionrops {
   // Add props here
 }
 
@@ -12,11 +12,12 @@ const CardItem: React.FC<{
   description: string;
   icon: string;
   className?: string;
-}> = ({ title, description, icon, className }) => {
+  different?: boolean;
+}> = ({ title, description, icon, className, different=false }) => {
   return (
     <>
       <motion.div
-        className={`bg-white border border-gray-200 text-left ${className}`}
+        className={`p-6 text-primary border rounded-3xl border-primary text-left overflow-hidden h-[264px] pt ${className}`}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
@@ -28,25 +29,30 @@ const CardItem: React.FC<{
           transition: { duration: 0.2, ease: "easeInOut" },
         }}
       >
-        <div className="w-full text-left mb-8">
+        <div
+          className={`w-full text-left relative  ${
+            different ? "" : "my-8"}`}
+        >
           <Image
             src={icon}
             alt="Icon"
-            width={50}
-            height={50}
-            className="w-auto h-full"
+            width={307}
+            height={203}
+            className={`h-full ${
+              different ? "absolute -bottom-8  -right-16 scale-150" : "w-auto"
+            }`}
           />
         </div>
-        <div className="p-6">
-        <p className="text-lg font-normal text-gray-950 mb-2">{title}</p>
-        <p className="text-gray-500 font-normal">{description}</p>
+        <div className="">
+          <p className="text-lg font-normal mb-2">{title}</p>
+          <p className="font-normal">{description}</p>
         </div>
       </motion.div>
     </>
   );
 };
 
-const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
+const ToolsSection: React.FC<ToolsSectionrops> = () => {
   return (
     <>
       <section id="solutions" className="py-12">
@@ -59,7 +65,7 @@ const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Solutions
+              Tools
             </motion.h2>
             <motion.p
               className="text-sm text-gray-500 max-w-2xl mx-auto my-8"
@@ -68,36 +74,42 @@ const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Explore our solutions to streamline cross-border payments, manage
-              currencies, and optimize your treasury—all in one platform
+              Power your operations with Ryno's tools designed for seamless
+              conversion, global payouts, and real-time financial management.
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
             {[
               {
-                title: "Fiat & Stablecoin On/Off-Ramps",
+                title: "On/Off-Ramps Infrastructure",
                 description:
-                  "Seamlessly convert between fiat (NGN, USD, EUR) and digital currencies (USDC, USDT) with secure, compliant on/off-ramps.",
-                icon: "/icons/card-1.svg",
+                  "Convert fiat and digital currencies seamlessly with our secure infrastructure.",
+                icon: "/icons/ToolsPage-1.svg",
+                className: "flex flex-row bg-[#F6F9FF] flex-row-reverse pt-36",
+                different: true
               },
               {
-                title: "Cross-Border Payments & Global Payouts",
+                title: "Global Payout Engine",
                 description:
-                  "Send funds instantly across borders and pay globally in stablecoins or local currencies.",
-                icon: "/icons/card-2.svg",
+                  "Effortlessly pay globally with Ryno's scalable payout engine",
+                icon: "/icons/ToolsPage-2.svg",
+                className: "bg-primary text-white flex flex-row-reverse pt-36",
+                different: true
               },
               {
-                title: "Multi-Currency Wallet & Virtual Accounts",
+                title: "Embedded Wallet Account",
                 description:
-                  "Manage multiple currencies and local collections with embedded wallets and virtual accounts (vIBANs), all from a single dashboard.",
-                icon: "/icons/card-3.svg",
+                  "Access and manage your multi-currency wallets in a few clicks",
+                icon: "/icons/ToolsIcon-1.svg",
+                className: "bg-primary text-white",
               },
               {
-                title: "Treasury Optimization",
+                title: "Treasury & Liquidity Management Dashbord",
                 description:
-                  "Put idle funds to work and earn low-risk yield with full flexibility.",
-                icon: "/icons/card-4.svg",
+                  "Get real-time insights into your treasury and liquidity flows.",
+                icon: "/icons/ToolsIcon-2.svg",
+                className: "bg-[#F6F9FF]",
               },
             ].map((solution, index) => (
               <CardItem
@@ -105,6 +117,8 @@ const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
                 title={solution.title}
                 description={solution.description}
                 icon={solution.icon}
+                className={solution.className}
+                different={solution.different}
               />
             ))}
           </div>
@@ -114,4 +128,4 @@ const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
       </section>
     </>
   );
-};export default SolutionsSection;
+};export default ToolsSection;

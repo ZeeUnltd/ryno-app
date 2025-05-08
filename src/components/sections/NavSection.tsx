@@ -67,17 +67,16 @@ const AppNav: React.FC<NavProps> = () => {
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
+        className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 backdrop-blur-xl"
         style={{
           backgroundColor: hasScrolled
-            ? "rgba(255, 255, 255, 1)"
+            ? "rgba(255, 255, 255, 0.8)"
             : "rgba(255, 255, 255, 0)",
           boxShadow: hasScrolled ? "0 1px 3px rgba(0, 0, 0, 0.1)" : "none",
         }}
       >
         <div
-          className="container mx-auto px-4 py-4 flex justify-between items-center h-32
-        "
+          className="container mx-auto px-4 py-2 flex justify-between items-center h-24"
         >
           <div className="flex items-center md:w-9/12">
             {hasScrolled ? (
@@ -85,8 +84,8 @@ const AppNav: React.FC<NavProps> = () => {
                 onClick={() => scrollToSection("hero")}
                 src="/logo/ryno-logo-new.svg"
                 alt="Ryno Logo"
-                height={47}
-                width={`${250}`}
+                height={40}
+                width={200}
                 className="w-auto"
               />
             ) : (
@@ -94,14 +93,13 @@ const AppNav: React.FC<NavProps> = () => {
                 onClick={() => scrollToSection("hero")}
                 src="/icons/white_logo.svg"
                 alt="Ryno Logo"
-                width={200}
-                height={47}
+                width={180}
+                height={40}
                 className="w-auto"
               />
             )}
 
-            {/* Major Menu buttons moved here, next to the logo */}
-            <div className="hidden md:flex items-center space-x-6 ml-24">
+            <div className="hidden md:flex items-center space-x-6 ml-16">
               <button
                 onClick={() => scrollToSection("features")}
                 className={`${
@@ -129,17 +127,16 @@ const AppNav: React.FC<NavProps> = () => {
             </div>
           </div>
 
-          {/* Login button moved to its own div */}
           <div className="md:block md:w-2/12 whitespace-nowrap">
             <Link
               href="/login"
-              className="flex flex-row justify-center items-center px-3 py-2.5 gap-1 m-auto w-[141px] h-[44px] bg-white border border-primary shadow-[0px_1px_2px_rgba(14,18,27,0.03)] rounded-xl"
+              className="flex flex-row justify-center items-center px-3 py-2 gap-1 m-auto w-[130px] h-[40px] bg-white border border-primary shadow-[0px_1px_2px_rgba(14,18,27,0.03)] rounded-xl"
             >
               <span className="flex items-center justify-center gap-1 text-primary">
                 Get Started
                 <svg
-                  width="20"
-                  height="21"
+                  width="18"
+                  height="19"
                   viewBox="0 0 20 21"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -147,15 +144,15 @@ const AppNav: React.FC<NavProps> = () => {
                   <path
                     d="M6.25 14.25L13.75 6.75"
                     stroke="#0040C2"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M6.25 6.75H13.75V14.25"
                     stroke="#0040C2"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>

@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = () => {
           backgroundImage: "url('/images/landing-backdrop.png')",
         }}
       >
-        <div className="container mx-auto px-4 py-4 mt-[65vh]">
+        <div className="container mx-auto px-4 py-4 mt-[40vh] md:mt-[65vh]">
           <div className="flex flex-col gap-5 md:flex-row items-center">
             <div className="md:w-1/2 md:mb-0 md:pr-10 ">
               <motion.h1

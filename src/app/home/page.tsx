@@ -8,24 +8,45 @@ import Hero from "@/components/sections/Hero";
 import AppNav from "@/components/sections/NavSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import SolutionsSection from "@/components/sections/SolutionsSections";
-
+import ToolsSection from "@/components/sections/ToolsSections";
+import InfrastructureSection from "@/components/sections/InfrastructureSection";
+import Footer from "@/components/Footer";
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white snap-y snap-mandatory overflow-y-scroll">
       {/* Navigation - Updated with motion and dynamic background */}
-      <AppNav />
+      <div className="snap-start">
+        <AppNav />
+      </div>
 
       {/* Hero Section - Update text color to be visible on blue background */}
-      <Hero />
+      <div className="snap-start">
+        <Hero />
+      </div>
 
       {/* Why Choose Ryno */}
-      <WhyChooseRyno />
+      <div className="snap-start">
+        <WhyChooseRyno />
+      </div>
 
       {/* Features Section */}
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
 
       {/* Solutions Section */}
-      <SolutionsSection />
-    </main>
-  );
+      <div className="snap-start">
+        <SolutionsSection />
+      </div>
+
+      <div className="snap-start">
+        <ToolsSection />
+      </div>
+
+      <div className="snap-start">
+        <InfrastructureSection />
+      </div>
+
+      <div className="snap-start">
+        <Footer />
+      </div>
+    </main>  );
 }
