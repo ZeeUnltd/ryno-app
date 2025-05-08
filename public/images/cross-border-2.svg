@@ -345,7 +345,7 @@
 <g filter="url(#filter2_d_95_1471)">
 <rect x="499" y="287" width="40" height="40" rx="10" fill="white"/>
 <rect x="499.5" y="287.5" width="39" height="39" rx="9.5" stroke="#DFE1E6"/>
-<path d="M514 312L524 302M524 302H514M524 302V312" stroke="#0040C2" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round"/>
+<path d="M514 312L524 302M524 302H514M524 302V312" stroke="#0040C2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
 </g>
 <defs>

@@ -352,7 +352,7 @@
 <g filter="url(#filter3_d_95_1470)">
 <rect x="499" y="287" width="40" height="40" rx="10" fill="white"/>
 <rect x="499.5" y="287.5" width="39" height="39" rx="9.5" stroke="#DFE1E6"/>
-<path d="M514 312L524 302M524 302H514M524 302V312" stroke="#0040C2" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round"/>
+<path d="M514 312L524 302M524 302H514M524 302V312" stroke="#0040C2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
 </g>
 <rect x="3.5" y="2.5" width="567" height="399" rx="11.5" stroke="#DFE1E6"/>
