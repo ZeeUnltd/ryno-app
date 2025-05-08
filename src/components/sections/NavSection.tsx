@@ -146,14 +146,14 @@ const AppNav: React.FC<NavProps> = () => {
                     stroke="#0040C2"
                     strokeWidth="1.5"
                     strokeLinecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M6.25 6.75H13.75V14.25"
                     stroke="#0040C2"
                     strokeWidth="1.5"
                     strokeLinecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </span>
