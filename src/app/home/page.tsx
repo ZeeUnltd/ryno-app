@@ -11,6 +11,7 @@ import SolutionsSection from "@/components/sections/SolutionsSections";
 import ToolsSection from "@/components/sections/ToolsSections";
 import InfrastructureSection from "@/components/sections/InfrastructureSection";
 import Footer from "@/components/Footer";
+import ContactSection from "@/components/sections/ContactSection";
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-white snap-y snap-mandatory overflow-y-scroll">
@@ -45,6 +46,9 @@ export default function LandingPage() {
         <InfrastructureSection />
       </div>
 
+      <div className="snap-start">
+        <ContactSection />
+      </div>
       <div className="snap-start">
         <Footer />
       </div>

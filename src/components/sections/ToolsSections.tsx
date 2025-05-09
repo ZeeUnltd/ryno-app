@@ -54,7 +54,7 @@ const CardItem: React.FC<{
 const ToolsSection: React.FC<ToolsSectionrops> = () => {
   return (
     <>
-      <section id="solutions" className="py-12">
+      <section id="tools" className="py-12">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
             <motion.h2
