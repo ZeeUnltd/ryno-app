@@ -101,7 +101,7 @@ const AppNav: React.FC<NavProps> = () => {
 
             <div className="hidden md:flex items-center space-x-6 ml-16">
               <button
-                onClick={() => scrollToSection("features")}
+                onClick={() => scrollToSection("why-us")}
                 className={`${
                   hasScrolled ? "text-gray-700" : "text-white"
                 } hover:text-blue-600 transition-colors`}
@@ -109,7 +109,7 @@ const AppNav: React.FC<NavProps> = () => {
                 About
               </button>
               <button
-                onClick={() => scrollToSection("how-it-works")}
+                onClick={() => scrollToSection("solutions")}
                 className={`${
                   hasScrolled ? "text-gray-700" : "text-white"
                 } hover:text-blue-600 transition-colors`}
@@ -117,7 +117,7 @@ const AppNav: React.FC<NavProps> = () => {
                 Solutions
               </button>
               <button
-                onClick={() => scrollToSection("testimonials")}
+                onClick={() => scrollToSection("tools")}
                 className={`${
                   hasScrolled ? "text-gray-700" : "text-white"
                 } hover:text-blue-600 transition-colors`}
