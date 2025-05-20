@@ -37,10 +37,10 @@ const WhyChooseRyno: React.FC<WhyChooseRynoProps> = () => {
   return (
     <>
       {/* Why choose Ryno | Trusted By Section */}
-      <section className="py-12" id="why-us">
+      <section className="py-16" id="why-us">
         <div className="container mx-auto max-w-6xl px-4 text-center w-full">
           <motion.h2
-            className="text-3xl md:text-4xl font-normal text-gray-900 mb-4"
+            className="text-3xl md:text-5xl font-medium text-gray-900 my-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
