@@ -34,13 +34,13 @@ export default function LandingPage() {
         <SolutionsSection />
       </div>
 
-      <div className="snap-start">
+      {/* <div className="snap-start">
         <ToolsSection />
-      </div>
+      </div> */}
 
-      <div className="snap-start">
+      {/* <div className="snap-start">
         <InfrastructureSection />
-      </div>
+      </div> */}
 
       <div className="snap-start">
         <ContactSection />

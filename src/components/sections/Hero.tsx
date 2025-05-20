@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = () => {
           backgroundImage: "url('/images/landing-backdrop.png')",
         }}
       >
-        <div className="container mx-auto px-4 py-4 mt-[40vh] md:mt-[65vh]">
+        <div className="container mx-auto px-2 py-4 mt-[40vh] md:mt-[65vh]">
           <div className="flex flex-col gap-5 md:flex-row items-center">
             <div className="md:w-1/2 md:mb-0 md:pr-10 ">
               <motion.h1
@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Cross-Border Payments Powered by Stablecoins
+                Emerging Markets Finance Powered by Stablecoins
               </motion.h1>
             </div>
             <div className="md:w-1/2 mt-auto">
@@ -48,12 +48,9 @@ const Hero: React.FC<HeroProps> = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
                     <span className="font-thin">
-                      Ryno is a global fintech company that gives businesses in
-                      emerging markets a fast, compliant way to move and manage
-                      money across borders{" "}
+                      An enterprise-grade, stablecoin-powered platform for managing real business needs in emerging markets, from cross-border payments to treasury optimization, multi-currency wallets and payroll
                       <span className="">
-                        — using stablecoins for cost-effective payments and
-                        liquidity at scale.
+                        —  with efficiency, affordability, security, and compliance.
                       </span>
                     </span>
                   </motion.p>
