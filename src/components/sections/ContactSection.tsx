@@ -41,7 +41,16 @@ function ContactSections() {
     <>
       <section id="contact-section" className="py-12 font-manrope">
         <div className="container mx-auto max-w-6xl px-4">
-          <div className="flex flex-wrap justify-center items-center self-stretch bg-white">
+          <motion.h2
+            className="text-3xl text-center md:text-4xl font-normal text-gray-900 my-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Get in touch with us
+          </motion.h2>
+          <div className="flex flex-wrap justify-center items-center self-stretch gap-12 bg-white">
             <div className="hidden md:block p-12 my-auto bg-primary rounded-[12px] min-w-60 w-[464px] max-md:px-5 max-md:max-w-full">
               <div className="w-full">
                 <div className="w-full">
@@ -88,32 +97,30 @@ function ContactSections() {
                 </div>
 
                 <div className="w-16 h-16 bg-white rounded-full flex justify-center items-center">
-                <a
-                  href="https://www.x.com/ryno-pay/"
-                  target="_blank"
-                  className="text-primary px-2 py-1 rounded-md text-xs font-medium hover:opacity-20 transition text-center"
-                >
-                  <Icons.twitter />
-                </a>
+                  <a
+                    href="https://www.x.com/ryno-pay/"
+                    target="_blank"
+                    className="text-primary px-2 py-1 rounded-md text-xs font-medium hover:opacity-20 transition text-center"
+                  >
+                    <Icons.twitter />
+                  </a>
                 </div>
                 <div className="w-16 h-16 bg-white rounded-full flex justify-center items-center">
-               
-                <a
-                  href="https://www.linkedin.com/company/ryno-pay/"
-                  target="_blank"
-                  className="text-primary px-2 py-1 rounded-md text-xs font-medium hover:opacity-20 transition text-center"
-                >
-                  <Icons.linkedIn />
-                </a>
+                  <a
+                    href="https://www.linkedin.com/company/ryno-pay/"
+                    target="_blank"
+                    className="text-primary px-2 py-1 rounded-md text-xs font-medium hover:opacity-20 transition text-center"
+                  >
+                    <Icons.linkedIn />
+                  </a>
                 </div>
 
                 <div className="flex shrink-0 self-stretch my-auto w-6 h-6" />
               </div>
             </div>
-            <div className="flex flex-1 shrink gap-10 items-center self-stretch my-auto basis-24  min-w-60 max-md:max-w-full">
-              <div className="flex flex-1 shrink justify-center self-stretch md:pl-12 my-auto w-full basis-0  min-w-60 max-md:max-w-full">
+            <div className="flex flex-1 shrink gap-10 items-center self-stretch basis-24  min-w-60 max-md:max-w-full border rounded-lg p-10">
+              <div className="flex flex-1 shrink justify-center self-stretch my-auto w-full basis-0  min-w-60 max-md:max-w-full">
                 <div className="flex-1 shrink w-full basis-0 min-w-60 max-md:max-w-full">
-                 
                   {/* FORM */}
                   <div className="mt-3.5 w-full max-md:max-w-full">
                     <div className="w-full max-md:max-w-full">
@@ -217,92 +224,90 @@ function ContactSections() {
                         </div>
                       </div>
                       <div className="mt-6 w-full max-md:max-w-full">
-                        <div className="text-sm font-medium leading-none text-slate-700">
+                        <div className="text-sm font-medium leading-none text-slate-700 my-4">
                           Company Size
                         </div>
-                        <div className="flex flex-wrap gap-3 items-start mt-4 w-full max-md:max-w-full">
-                          <div className="w-full flex flex-row">
-                            <div className="flex gap-1 items-center w-full">
-                              <div className="flex justify-center items-center self-stretch my-auto w-5">
-                                <input
-                                  type="radio"
-                                  name="companySize"
-                                  value="1-10"
-                                  className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
-                                />
-                              </div>
-                              <label
-                                htmlFor="companySize"
-                                className="self-stretch my-auto text-base font-medium text-slate-700"
-                              >
-                                1-10
-                              </label>
+                        <div className="w-full flex gap-3 flex-col md:flex-row">
+                          <div className="flex gap-1 items-center w-full">
+                            <div className="flex justify-center items-center self-stretch my-auto w-5">
+                              <input
+                                type="radio"
+                                name="companySize"
+                                value="1-10"
+                                className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
+                              />
                             </div>
-                            <div className="flex gap-1 items-center w-full">
-                              <div className="flex justify-center items-center self-stretch my-auto w-5">
-                                <input
-                                  type="radio"
-                                  name="companySize"
-                                  value="11-50"
-                                  className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
-                                />
-                              </div>
+                            <label
+                              htmlFor="companySize"
+                              className="self-stretch my-auto text-base font-medium text-slate-700"
+                            >
+                              1-10
+                            </label>
+                          </div>
+                          <div className="flex gap-1 items-center w-full">
+                            <div className="flex justify-center items-center self-stretch my-auto w-5">
+                              <input
+                                type="radio"
+                                name="companySize"
+                                value="11-50"
+                                className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
+                              />
+                            </div>
 
-                              <label
-                                htmlFor="companySize"
-                                className="self-stretch my-auto text-base font-medium text-slate-700"
-                              >
-                                11-50
-                              </label>
+                            <label
+                              htmlFor="companySize"
+                              className="self-stretch my-auto text-base font-medium text-slate-700"
+                            >
+                              11-50
+                            </label>
+                          </div>
+                          <div className="flex gap-1 items-center w-full">
+                            <div className="flex justify-center items-center self-stretch my-auto w-5">
+                              <input
+                                type="radio"
+                                name="companySize"
+                                value="51-200"
+                                className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
+                              />
                             </div>
-                            <div className="flex gap-1 items-center w-full">
-                              <div className="flex justify-center items-center self-stretch my-auto w-5">
-                                <input
-                                  type="radio"
-                                  name="companySize"
-                                  value="51-200"
-                                  className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
-                                />
-                              </div>
-                              <label
-                                htmlFor="companySize"
-                                className="self-stretch my-auto text-base font-medium text-slate-700"
-                              >
-                                51-200
-                              </label>
+                            <label
+                              htmlFor="companySize"
+                              className="self-stretch my-auto text-base font-medium text-slate-700"
+                            >
+                              51-200
+                            </label>
+                          </div>
+                          <div className="flex gap-1 items-center w-full">
+                            <div className="flex justify-center items-center self-stretch my-auto w-5">
+                              <input
+                                type="radio"
+                                name="companySize"
+                                value="201-500"
+                                className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
+                              />
                             </div>
-                            <div className="flex gap-1 items-center w-full">
-                              <div className="flex justify-center items-center self-stretch my-auto w-5">
-                                <input
-                                  type="radio"
-                                  name="companySize"
-                                  value="201-500"
-                                  className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
-                                />
-                              </div>
-                              <label
-                                htmlFor="companySize"
-                                className="self-stretch my-auto text-base font-medium text-slate-700"
-                              >
-                                201-500
-                              </label>
+                            <label
+                              htmlFor="companySize"
+                              className="self-stretch my-auto text-base font-medium text-slate-700"
+                            >
+                              201-500
+                            </label>
+                          </div>
+                          <div className="flex gap-1 items-center w-full">
+                            <div className="flex justify-center items-center self-stretch my-auto w-5">
+                              <input
+                                type="radio"
+                                name="companySize"
+                                value="500+"
+                                className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
+                              />
                             </div>
-                            <div className="flex gap-1 items-center w-full">
-                              <div className="flex justify-center items-center self-stretch my-auto w-5">
-                                <input
-                                  type="radio"
-                                  name="companySize"
-                                  value="500+"
-                                  className="w-5 h-5 bg-white rounded-xl border border-solid border-[color:var(--Gray-300,#D0D5DD)] min-h-5"
-                                />
-                              </div>
-                              <label
-                                htmlFor="companySize"
-                                className="self-stretch my-auto text-base font-medium text-slate-700"
-                              >
-                                500+
-                              </label>
-                            </div>
+                            <label
+                              htmlFor="companySize"
+                              className="self-stretch my-auto text-base font-medium text-slate-700"
+                            >
+                              500+
+                            </label>
                           </div>
                         </div>
                       </div>
