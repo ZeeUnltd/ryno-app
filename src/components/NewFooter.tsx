@@ -35,8 +35,8 @@ const Footer = () => {
         />
 
         <p className="text-white text-base mb-4">
-          ryno empowers businesses with 24/7 global and secure cross-border and
-          trade services seamlessly
+          {/* ryno empowers businesses with 24/7 global and secure cross-border and
+          trade services seamlessly */}
         </p>
         {/* <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-8 mb-8 sm:mb-12">
           <a href="#" className="text-sm hover:underline">
@@ -61,12 +61,11 @@ const Footer = () => {
       <div className="border-t border-gray-700 pt-8 mt-8 text-sm text-gray-400 text-start w-[90%] sm:w-[85%] md:w-[80%] mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-0">
         <div className="w-full lg:w-[35%]">
           <p className="mb-6">
-            Rhyno Financial (ryno) is authorized by the Financial Transactions
-            and Reports Analysis Centre of Canada (FINTRAC) for processing money
-            transferring and payment services under Money Services Business
-            (MSB). MSB registration number: <strong>C100000021</strong> and
-            incorporated by the Government of Alberta (Corporate Access Number:
-            2026336632)
+            Rhyno Financial Inc (dba ryno) is registered the Financial Transactions
+            and Reports Analysis Centre of Canada (FINTRAC) as a Money Services Business
+            (MSB) for money transfer and payment processing services. MSB Registration Number: <strong>C100000021</strong>. 
+            The company is incorporated by the Government of Alberta (Corporate Access Number: 2026336632)
+             
             {/* Rhyno Financial (ryno) is authorized by the Financial Transactions and Reports Analysis Centre of Canada (FINTRAC) for the provision of money transferring and payment services under Money Services Business (MSB) registration number C100000021) and incorporated by the Government of Alberta (Corporate Access Number: 2026336632) */}
           </p>
           <p className="hidden lg:block mt-6 text-gray-500 text-center lg:text-left">
