@@ -49,13 +49,13 @@ const WhyChooseRyno: React.FC<WhyChooseRynoProps> = () => {
             Why Choose ryno?
           </motion.h2>
 
-          <div className="w-full flex justify-center items-center">
+          {/* <div className="w-full flex justify-center items-center">
             <div className="text-sm lg:w-8/12 text-center text-gray-500 my-8">
               Ryno bridges the gap between stablecoin technology and real-world
               business needs in emerging markets — with a secure, compliant, and
               enterprise-ready platform.
             </div>
-          </div>
+          </div> */}
           
           <GetStartedButton />
           <div id="flexible-content-display" className="py-20 px-4">

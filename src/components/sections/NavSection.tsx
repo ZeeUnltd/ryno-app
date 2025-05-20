@@ -67,10 +67,10 @@ const AppNav: React.FC<NavProps> = () => {
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 backdrop-blur-xl"
+        className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
         style={{
           backgroundColor: hasScrolled
-            ? "rgba(255, 255, 255, 0.8)"
+            ? "rgba(255, 255, 255)"
             : "rgba(255, 255, 255, 0)",
           boxShadow: hasScrolled ? "0 1px 3px rgba(0, 0, 0, 0.1)" : "none",
         }}
@@ -127,10 +127,10 @@ const AppNav: React.FC<NavProps> = () => {
             </div>
           </div>
 
-          <div className="md:block md:w-2/12 whitespace-nowrap">
+          <div className="md:block md:w-2/12 whitespace-nowrap ml-auto flex justify-end">
             <Link
               href="/login"
-              className="flex flex-row justify-center items-center px-3 py-2 gap-1 m-auto w-[130px] h-[40px] bg-white border border-primary shadow-[0px_1px_2px_rgba(14,18,27,0.03)] rounded-xl"
+              className="flex ml-auto w-[130px] items-center px-3 py-2 gap-1 h-[40px] bg-white border border-primary shadow-[0px_1px_2px_rgba(14,18,27,0.03)] rounded-xl"
             >
               <span className="flex items-center justify-center gap-1 text-primary">
                 Get Started

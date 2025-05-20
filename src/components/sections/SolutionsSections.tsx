@@ -61,7 +61,7 @@ const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
             >
               Solutions
             </motion.h2>
-            <motion.p
+            {/* <motion.p
               className="text-sm text-gray-500 max-w-2xl mx-auto my-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -70,15 +70,15 @@ const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
             >
               Explore our solutions to streamline cross-border payments, manage
               currencies, and optimize your treasury—all in one platform
-            </motion.p>
+            </motion.p> */}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 mb-12">
             {[
               {
                 title: "Fiat & Stablecoin On/Off-Ramps",
                 description:
-                  "Seamlessly convert between fiat (NGN, USD, EUR) and digital currencies (USDC, USDT) with secure, compliant on/off-ramps.",
+                  "Seamlessly convert between fiat (NGN, USD, EUR) and digital currencies (e.g USDC, USDT) with secure, compliant on/off-ramps.",
                 icon: "/icons/card-1.svg",
               },
               {
@@ -94,9 +94,9 @@ const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
                 icon: "/icons/card-3.svg",
               },
               {
-                title: "Treasury Optimization",
+                title: "Treasury Optimization and Liquidity Management",
                 description:
-                  "Put idle funds to work and earn low-risk yield with full flexibility.",
+                  "Managae treasury operations and optimize liquidity with low risk embedded stablecoin yield.",
                 icon: "/icons/card-4.svg",
               },
             ].map((solution, index) => (
