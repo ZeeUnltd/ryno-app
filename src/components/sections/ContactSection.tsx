@@ -62,7 +62,7 @@ function ContactSections() {
           >
             Get in touch with us
           </motion.h2>
-          <div className="flex flex-wrap justify-center items-center self-stretch gap-12 bg-white">
+          <div className="flex flex-wrap justify-center items-center self-stretch gap-12 ">
             {/* Sidebar */}
             <div className="hidden md:block p-12 my-auto bg-primary rounded-[12px] min-w-60 w-[464px] max-md:px-5 max-md:max-w-full bg-[url('/icons/contact-bg-solid.svg')] bg-no-repeat bg-bottom">
               <div className="w-full">
