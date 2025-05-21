@@ -53,7 +53,7 @@ const SolutionsSection: React.FC<SolutionsSectionrops> = () => {
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
             <motion.h2
-              className="text-3xl md:text-5xl text-center font-medium text-gray-900 my-16"
+              className="text-3xl md:text-5xl text-center font-medium text-gray-900 my-16 lowercase"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
