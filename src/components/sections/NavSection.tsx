@@ -117,12 +117,12 @@ const AppNav: React.FC<NavProps> = () => {
                 Solutions
               </button>
               <button
-                onClick={() => scrollToSection("tools")}
+                onClick={() => scrollToSection("contact-section")}
                 className={`${
                   hasScrolled ? "text-gray-700" : "text-white"
                 } hover:text-blue-600 transition-colors`}
               >
-                Tools
+                Contact Us
               </button>
             </div>
           </div>

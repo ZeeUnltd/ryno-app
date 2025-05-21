@@ -58,7 +58,7 @@ const ToolsSection: React.FC<ToolsSectionrops> = () => {
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
             <motion.h2
-              className="text-3xl md:text-4xl font-normal text-gray-900 mb-4"
+              className="text-3xl md:text-4xl font-normal text-gray-900 mb-4 lowercase"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}

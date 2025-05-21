@@ -3,26 +3,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="relative bg-black text-white pt-16 sm:pt-24 md:pt-32 pb-8 sm:pb-12 md:pb-16">
-      {/* <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url('/images/global-background.svg')`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          height: "90%",
-          width: "100%",
-        }}
-      /> */}
-      {/* "We Are Live In" Section */}
-      {/* <div className="text-center mb-48 sm:mb-72 md:mb-96">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-fraunces text-white mb-24 sm:mb-36 md:mb-48 px-4">
-          We are live in <br /> 50+ Countries
-        </h2>
-        <div className="relative h-48 sm:h-72 md:h-96 mx-auto max-w-4xl"></div>
-      </div> */}
-
-      {/* "Let's Work Together" Section */}
+     
 
       {/* Footer Content */}
       <div className="text-center mb-8 sm:mb-12 md:mb-16 px-4">
@@ -76,20 +57,20 @@ const Footer = () => {
         <div className="flex flex-col items-center lg:items-end">
           <div className="flex flex-col items-center md:items-end">
             <div className="flex justify-center lg:justify-end">
-              <img
+              {/* <img
                 src="/images/ISO_logo.png"
                 alt="ISO Certification"
                 width={69}
                 height={64}
                 className="mb-4"
-              />
+              /> */}
             </div>
-            <p className="text-center md:text-right w-52 text-[#525866] text-sm">
+            {/* <p className="text-center md:text-right w-52 text-[#525866] text-sm">
               ryno is ISO 27001 (Information Security Management System)
               certified.
-            </p>
+            </p> */}
           </div>
-          <div className="flex flex-row gap-2 sm:gap-4 justify-center bg-black py-6 w-full">
+          <div className="flex flex-row gap-2 sm:gap-4 justify-center bg-black py-6 w-full mt-auto">
             <a
               href="https://www.linkedin.com/company/ryno-pay/"
               target="_blank"

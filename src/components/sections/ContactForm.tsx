@@ -28,7 +28,7 @@ const formik = useFormik({
     }),
     onSubmit: async (values, { resetForm, setSubmitting }) => {
         try {
-            await fetch("https://formsubmit.co/prod@rynopay.io", {
+            await fetch("https://formsubmit.co/e07286e5e84c1f1f3cdcbea7889c0006", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
