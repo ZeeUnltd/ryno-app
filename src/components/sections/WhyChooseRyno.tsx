@@ -37,10 +37,10 @@ const WhyChooseRyno: React.FC<WhyChooseRynoProps> = () => {
   return (
     <>
       {/* Why choose Ryno | Trusted By Section */}
-      <section className="py-12" id="why-us">
+      <section className="py-16" id="why-us">
         <div className="container mx-auto max-w-6xl px-4 text-center w-full">
           <motion.h2
-            className="text-3xl md:text-4xl font-normal text-gray-900 mb-4"
+            className="text-3xl md:text-5xl font-medium text-gray-900 my-8 lowercase"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -49,13 +49,13 @@ const WhyChooseRyno: React.FC<WhyChooseRynoProps> = () => {
             Why Choose ryno?
           </motion.h2>
 
-          <div className="w-full flex justify-center items-center">
+          {/* <div className="w-full flex justify-center items-center">
             <div className="text-sm lg:w-8/12 text-center text-gray-500 my-8">
               Ryno bridges the gap between stablecoin technology and real-world
               business needs in emerging markets — with a secure, compliant, and
               enterprise-ready platform.
             </div>
-          </div>
+          </div> */}
           
           <GetStartedButton />
           <div id="flexible-content-display" className="py-20 px-4">
