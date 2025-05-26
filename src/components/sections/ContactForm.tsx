@@ -15,6 +15,7 @@ function ContactForm() {
       companySize: "",
       paymentVolume: "",
       message: "",
+      _captcha: false,
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required("First name is required"),
