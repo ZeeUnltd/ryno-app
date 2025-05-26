@@ -5,45 +5,49 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 function ContactForm() {
-const formik = useFormik({
+  const formik = useFormik({
     initialValues: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        companyName: "",
-        phoneNumber: "",
-        companySize: "",
-        paymentVolume: "",
-        message: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      companyName: "",
+      phoneNumber: "",
+      companySize: "",
+      paymentVolume: "",
+      message: "",
+      _captcha: false,
     },
     validationSchema: Yup.object({
-        firstName: Yup.string().required("First name is required"),
-        lastName: Yup.string().required("Last name is required"),
-        email: Yup.string().email("Invalid email").required("Email is required"),
-        companyName: Yup.string().required("Company name is required"),
-        phoneNumber: Yup.string().matches(/^\+?\d*$/, "Phone number must contain only digits"),
-        companySize: Yup.string().required("Company size is required"),
-        paymentVolume: Yup.string().required("Payment volume is required"),
-        message: Yup.string().required("Message is required"),
+      firstName: Yup.string().required("First name is required"),
+      lastName: Yup.string().required("Last name is required"),
+      email: Yup.string().email("Invalid email").required("Email is required"),
+      companyName: Yup.string().required("Company name is required"),
+      phoneNumber: Yup.string().matches(
+        /^\+?\d*$/,
+        "Phone number must contain only digits"
+      ),
+      companySize: Yup.string().required("Company size is required"),
+      paymentVolume: Yup.string().required("Payment volume is required"),
+      message: Yup.string().required("Message is required"),
     }),
     onSubmit: async (values, { resetForm, setSubmitting }) => {
-        try {
-            await fetch("https://formsubmit.co/e07286e5e84c1f1f3cdcbea7889c0006", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                },
-                body: JSON.stringify(values),
-            });
-            resetForm();
-        } catch (error) {
-            console.error("Form submission error:", error);
-        } finally {
-            setSubmitting(false);
-        }
+      try {
+        await fetch("https://formsubmit.co/e07286e5e84c1f1f3cdcbea7889c0006", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+        resetForm();
+      } catch (error) {
+        console.error("Form submission error:", error);
+      } finally {
+        setSubmitting(false);
+      }
     },
-});
+  });
 
   return (
     <form onSubmit={formik.handleSubmit} className="w-full max-md:max-w-full">
@@ -69,7 +73,9 @@ const formik = useFormik({
                   />
                 </div>
                 {formik.touched.firstName && formik.errors.firstName && (
-                  <div className="text-xs text-red-500 mt-1">{formik.errors.firstName}</div>
+                  <div className="text-xs text-red-500 mt-1">
+                    {formik.errors.firstName}
+                  </div>
                 )}
               </div>
             </div>
@@ -92,7 +98,9 @@ const formik = useFormik({
                   />
                 </div>
                 {formik.touched.lastName && formik.errors.lastName && (
-                  <div className="text-xs text-red-500 mt-1">{formik.errors.lastName}</div>
+                  <div className="text-xs text-red-500 mt-1">
+                    {formik.errors.lastName}
+                  </div>
                 )}
               </div>
             </div>
@@ -118,7 +126,9 @@ const formik = useFormik({
                   />
                 </div>
                 {formik.touched.email && formik.errors.email && (
-                  <div className="text-xs text-red-500 mt-1">{formik.errors.email}</div>
+                  <div className="text-xs text-red-500 mt-1">
+                    {formik.errors.email}
+                  </div>
                 )}
               </div>
             </div>
@@ -141,7 +151,9 @@ const formik = useFormik({
                   />
                 </div>
                 {formik.touched.companyName && formik.errors.companyName && (
-                  <div className="text-xs text-red-500 mt-1">{formik.errors.companyName}</div>
+                  <div className="text-xs text-red-500 mt-1">
+                    {formik.errors.companyName}
+                  </div>
                 )}
               </div>
             </div>
@@ -166,7 +178,9 @@ const formik = useFormik({
                 />
               </div>
               {formik.touched.phoneNumber && formik.errors.phoneNumber && (
-                <div className="text-xs text-red-500 mt-1">{formik.errors.phoneNumber}</div>
+                <div className="text-xs text-red-500 mt-1">
+                  {formik.errors.phoneNumber}
+                </div>
               )}
             </div>
           </div>
@@ -200,7 +214,9 @@ const formik = useFormik({
             ))}
           </div>
           {formik.touched.companySize && formik.errors.companySize && (
-            <div className="text-xs text-red-500 mt-1">{formik.errors.companySize}</div>
+            <div className="text-xs text-red-500 mt-1">
+              {formik.errors.companySize}
+            </div>
           )}
         </div>
         {/* Payment Volume */}
@@ -222,7 +238,9 @@ const formik = useFormik({
                 />
               </div>
               {formik.touched.paymentVolume && formik.errors.paymentVolume && (
-                <div className="text-xs text-red-500 mt-1">{formik.errors.paymentVolume}</div>
+                <div className="text-xs text-red-500 mt-1">
+                  {formik.errors.paymentVolume}
+                </div>
               )}
             </div>
           </div>
@@ -245,7 +263,9 @@ const formik = useFormik({
                 />
               </div>
               {formik.touched.message && formik.errors.message && (
-                <div className="text-xs text-red-500 mt-1">{formik.errors.message}</div>
+                <div className="text-xs text-red-500 mt-1">
+                  {formik.errors.message}
+                </div>
               )}
             </div>
           </div>
