@@ -106,7 +106,7 @@ const AppNav: React.FC<NavProps> = () => {
                   hasScrolled ? "text-gray-700" : "text-white"
                 } hover:text-blue-600 transition-colors`}
               >
-                About
+                Why Ryno?
               </button>
               <button
                 onClick={() => scrollToSection("solutions")}
@@ -129,7 +129,8 @@ const AppNav: React.FC<NavProps> = () => {
 
           <div className="md:block md:w-2/12 whitespace-nowrap ml-auto flex justify-end">
             <Link
-              href="/login"
+              href="http://app.rynopay.io"
+              target="_blank"
               className="flex ml-auto w-[130px] items-center px-3 py-2 gap-1 h-[40px] bg-white border border-primary shadow-[0px_1px_2px_rgba(14,18,27,0.03)] rounded-xl"
             >
               <span className="flex items-center justify-center gap-1 text-primary">

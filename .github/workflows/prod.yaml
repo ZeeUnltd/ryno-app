@@ -10,7 +10,7 @@ env:
   #ECR_REPOSITORY: MY_ECR_REPOSITORY           # set this to your Amazon ECR repository name
   ECS_SERVICE: prod_website                 # set this to your Amazon ECS service name
   ECS_CLUSTER: Rynopay_Website                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: .aws/task-definition.json # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: .aws/prod-task-definition.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: website           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
@@ -24,17 +24,17 @@ jobs:
     - name: Configure AWS credentials #This credential should have ECS permissions
       uses: aws-actions/configure-aws-credentials@0e613a0980cbf65ed5b322eb7a1e075d28913a83
       with:
-        aws-access-key-id: ${{ secrets.ECR_IAM_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.ECR_IAM_SECRET_ACCESS_KEY }}
+        aws-access-key-id: ${{ secrets.PROD_IAM_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.PROD_IAM_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
     
     - name: Login to ECR
       id: ecr_login
       uses: docker/login-action@v3
       with:
-        registry: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com
-        username: ${{ secrets.ECR_IAM_ACCESS_KEY_ID }}
-        password: ${{ secrets.ECR_IAM_SECRET_ACCESS_KEY }}
+        registry: ${{ secrets.PROD_AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com
+        username: ${{ secrets.PROD_IAM_ACCESS_KEY_ID }}
+        password: ${{ secrets.PROD_IAM_SECRET_ACCESS_KEY }}
 
     - name: Build and push to ECR
       id: docker_build
@@ -43,7 +43,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/rynopay_prod/client_site:${{ github.sha }}
+        tags: ${{ secrets.PROD_AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/rynopay_prod/client_site:${{ github.sha }}
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
@@ -51,7 +51,7 @@ jobs:
       with:
         task-definition: ${{ env.ECS_TASK_DEFINITION }}
         container-name: ${{ env.CONTAINER_NAME }}
-        image: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/rynopay_prod/client_site:${{ github.sha }}
+        image: ${{ secrets.PROD_AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/rynopay_prod/client_site:${{ github.sha }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@df9643053eda01f169e64a0e60233aacca83799a
