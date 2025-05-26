@@ -21,7 +21,7 @@ const GetStartedButton: React.FC<{
             whileTap={{ scale: 0.95 }}
           >
             <Link
-              href="http://app.rynopay.io"
+              href="https://app.rynopay.io"
               target="_blank"
               className={`flex flex-row justify-center items-center px-3 py-6 gap-1 m-auto w-[241px] h-[56px] bg-primary border border-[#0040C2] text-white shadow-[0px_1px_2px_rgba(14,18,27,0.03)] rounded-xl ${buttonClass && buttonClass}`}
             >
