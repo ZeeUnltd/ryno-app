@@ -88,8 +88,7 @@ function ContactSections() {
                       </div>
                       <div className="flex items-start self-start mt-5 text-base font-medium text-white underline whitespace-nowrap">
                         <div className="gap-2 self-stretch text-white underline decoration-auto decoration-solid underline-offset-auto text-xl font-semibold">
-                          info@rynopay.io
-                        </div>
+                          <a href="mailto:info@rynopay.io">info@rynopay.io</a>                        </div>
                       </div>
                     </div>
                   </div>
