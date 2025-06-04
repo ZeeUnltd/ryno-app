@@ -37,7 +37,7 @@ function ContactForm() {
     onSubmit: async (values, { resetForm, setSubmitting }) => {
       try {
         const response = await fetch(
-          "https://api-notification.rynopay.io/contact/submi",
+          "https://api-notification.rynopay.io/contact/submit",
           {
             method: "POST",
             headers: {
