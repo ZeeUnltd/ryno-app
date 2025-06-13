@@ -31,7 +31,9 @@ function ContactForm() {
         .max(25, "Last name must be at most 25 characters")
         .required("Last name is required"),
       email: Yup.string().email("Invalid email").required("Email is required"),
-      companyName: Yup.string().required("Company name is required"),
+      companyName: Yup.string()
+        .max(60, "Company name must be at most 60 characters")
+        .required("Company name is required"),
       phoneNumber: Yup.string().matches(
         /^\+?\d*$/,
         "Phone number must contain only digits"
@@ -258,6 +260,7 @@ function ContactForm() {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         placeholder="Company name"
+                        maxLength={60}
                         className="flex-1 shrink gap-2 self-stretch my-auto w-full basis-0 min-w-60 bg-transparent outline-none"
                       />
                     </div>
