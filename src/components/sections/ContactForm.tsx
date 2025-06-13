@@ -353,6 +353,10 @@ function ContactForm() {
                       onBlur={formik.handleBlur}
                       placeholder="5,000,000"
                       className="flex-1 shrink gap-2 self-stretch my-auto w-full basis-0 min-w-60 bg-transparent outline-none"
+                      onInput={(e) => {
+                        // @ts-ignore
+                        e.target.value = e.target.value.replace(/\D/g, "");
+                      }}
                     />
                   </div>
                   {formik.touched.paymentVolume &&
