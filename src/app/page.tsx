@@ -10,7 +10,7 @@ import Footer from "@/components/NewFooter";
 import ContactSection from "@/components/sections/ContactSection";
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-white snap-y snap-mandatory overflow-y-scroll">
+    <main className="min-h-screen bg-white snap-y snap-mandatory">
       {/* Navigation - Updated with motion and dynamic background */}
       <div className="snap-start">
         <AppNav />
