@@ -78,7 +78,7 @@ const Footer = () => {
             >
               LinkedIn
             </a>
-            <a
+            {/* <a
               href="https://www.instagram.com/ryno-pay/"
               target="_blank"
               className="bg-primary text-gray-300 px-2 py-1 rounded-md text-xs font-medium hover:bg-gray-700 hover:text-white transition text-center"
@@ -99,7 +99,7 @@ const Footer = () => {
               className="bg-primary text-gray-300 px-2 py-1 rounded-md text-xs font-medium hover:bg-gray-700 hover:text-white transition text-center"
             >
               Facebook
-            </a>
+            </a> */}
           </div>
           <p className="lg:hidden block mt-6 text-gray-500 text-center lg:text-left">
             © {new Date().getFullYear()} ryno • Privacy Policy • Terms of

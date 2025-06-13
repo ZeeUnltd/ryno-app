@@ -22,17 +22,27 @@ function ContactForm() {
       // _captcha: false,
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required("First name is required"),
-      lastName: Yup.string().required("Last name is required"),
+      firstName: Yup.string()
+        .min(2, "First name must be at least 2 characters")
+        .max(25, "First name must be at most 25 characters")
+        .required("First name is required"),
+      lastName: Yup.string()
+        .min(2, "Last name must be at least 2 characters")
+        .max(25, "Last name must be at most 25 characters")
+        .required("Last name is required"),
       email: Yup.string().email("Invalid email").required("Email is required"),
-      companyName: Yup.string().required("Company name is required"),
+      companyName: Yup.string()
+        .max(60, "Company name must be at most 60 characters")
+        .required("Company name is required"),
       phoneNumber: Yup.string().matches(
         /^\+?\d*$/,
         "Phone number must contain only digits"
       ),
       companySize: Yup.string().required("Company size is required"),
       paymentVolume: Yup.string().required("Payment volume is required"),
-      message: Yup.string().required("Message is required"),
+      message: Yup.string()
+        .required("Message is required")
+        .max(500, "Message must be at most 500 characters"),
     }),
     onSubmit: async (values, { resetForm, setSubmitting }) => {
       try {
@@ -161,6 +171,7 @@ function ContactForm() {
                   <div className="w-full">
                     <div className="text-sm font-medium leading-none text-slate-700">
                       First Name
+                      <span className="text-red-500 ml-1">*</span>
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)]">
                       <input
@@ -186,6 +197,7 @@ function ContactForm() {
                   <div className="w-full">
                     <div className="text-sm font-medium leading-none text-slate-700">
                       Last Name
+                      <span className="text-red-500 ml-1">*</span>
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)]">
                       <input
@@ -214,6 +226,7 @@ function ContactForm() {
                   <div className="w-full">
                     <div className="text-sm font-medium leading-none text-slate-700">
                       Work Email
+                      <span className="text-red-500 ml-1">*</span>
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 w-full text-base text-gray-500 whitespace-nowrap bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)]">
                       <input
@@ -239,6 +252,7 @@ function ContactForm() {
                   <div className="w-full">
                     <div className="text-sm font-medium leading-none text-slate-700">
                       Company Name
+                      <span className="text-red-500 ml-1">*</span>
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)]">
                       <input
@@ -248,6 +262,7 @@ function ContactForm() {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         placeholder="Company name"
+                        maxLength={60}
                         className="flex-1 shrink gap-2 self-stretch my-auto w-full basis-0 min-w-60 bg-transparent outline-none"
                       />
                     </div>
@@ -266,7 +281,8 @@ function ContactForm() {
               <div className="w-full max-md:max-w-full">
                 <div className="w-full max-md:max-w-full">
                   <div className="text-sm font-medium leading-none text-slate-700">
-                    Phone number (optional)
+                    Phone number{" "}
+                    <span className="text-gray-400 text-xs">(optional)</span>
                   </div>
                   <div className="flex overflow-hidden gap-2 items-center px-3.5 py-2.5 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)] max-md:max-w-full">
                     <input
@@ -291,6 +307,7 @@ function ContactForm() {
             <div className="mt-6 w-full max-md:max-w-full">
               <div className="text-sm font-medium leading-none text-slate-700 my-4">
                 Company Size
+                <span className="text-red-500 ml-1">*</span>
               </div>
               <div className="w-full flex gap-3 flex-col md:flex-row">
                 {["1-10", "11-50", "51-200", "201-500", "500+"].map((size) => (
@@ -327,6 +344,7 @@ function ContactForm() {
                 <div className="w-full max-md:max-w-full">
                   <div className="text-sm font-medium leading-none text-slate-700">
                     Expected monthly payment volume (in USD or equivalent)
+                    <span className="text-red-500 ml-1">*</span>
                   </div>
                   <div className="flex overflow-hidden gap-2 items-center px-3.5 py-2.5 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)] max-md:max-w-full">
                     <input
@@ -337,6 +355,10 @@ function ContactForm() {
                       onBlur={formik.handleBlur}
                       placeholder="5,000,000"
                       className="flex-1 shrink gap-2 self-stretch my-auto w-full basis-0 min-w-60 bg-transparent outline-none"
+                      onInput={(e) => {
+                        // @ts-ignore
+                        e.target.value = e.target.value.replace(/\D/g, "");
+                      }}
                     />
                   </div>
                   {formik.touched.paymentVolume &&
@@ -354,6 +376,7 @@ function ContactForm() {
                 <div className="flex-1 w-full max-md:max-w-full">
                   <div className="text-sm font-medium leading-none text-slate-700">
                     Share your goals or questions
+                    <span className="text-red-500 ml-1">*</span>
                   </div>
                   <div className="flex overflow-hidden gap-2 items-center px-3.5 py-2.5 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)] max-md:max-w-full">
                     <textarea
@@ -363,7 +386,11 @@ function ContactForm() {
                       onBlur={formik.handleBlur}
                       placeholder="Tell us a little about the goal or your question..."
                       className="flex-1 shrink gap-2 self-stretch my-auto w-full basis-0 min-w-60 bg-transparent outline-none"
+                      maxLength={500}
                     />
+                  </div>
+                  <div className="text-xs text-gray-400 mt-1 text-right w-full">
+                    {formik.values.message.length}/500
                   </div>
                   {formik.touched.message && formik.errors.message && (
                     <div className="text-xs text-red-500 mt-1">
