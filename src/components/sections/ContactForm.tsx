@@ -40,7 +40,9 @@ function ContactForm() {
       ),
       companySize: Yup.string().required("Company size is required"),
       paymentVolume: Yup.string().required("Payment volume is required"),
-      message: Yup.string().required("Message is required"),
+      message: Yup.string()
+        .required("Message is required")
+        .max(500, "Message must be at most 500 characters"),
     }),
     onSubmit: async (values, { resetForm, setSubmitting }) => {
       try {
@@ -384,7 +386,11 @@ function ContactForm() {
                       onBlur={formik.handleBlur}
                       placeholder="Tell us a little about the goal or your question..."
                       className="flex-1 shrink gap-2 self-stretch my-auto w-full basis-0 min-w-60 bg-transparent outline-none"
+                      maxLength={500}
                     />
+                  </div>
+                  <div className="text-xs text-gray-400 mt-1 text-right w-full">
+                    {formik.values.message.length}/500
                   </div>
                   {formik.touched.message && formik.errors.message && (
                     <div className="text-xs text-red-500 mt-1">
