@@ -167,6 +167,7 @@ function ContactForm() {
                   <div className="w-full">
                     <div className="text-sm font-medium leading-none text-slate-700">
                       First Name
+                      <span className="text-red-500 ml-1">*</span>
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)]">
                       <input
@@ -192,6 +193,7 @@ function ContactForm() {
                   <div className="w-full">
                     <div className="text-sm font-medium leading-none text-slate-700">
                       Last Name
+                      <span className="text-red-500 ml-1">*</span>
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)]">
                       <input
@@ -220,6 +222,7 @@ function ContactForm() {
                   <div className="w-full">
                     <div className="text-sm font-medium leading-none text-slate-700">
                       Work Email
+                      <span className="text-red-500 ml-1">*</span>
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 w-full text-base text-gray-500 whitespace-nowrap bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)]">
                       <input
@@ -245,6 +248,7 @@ function ContactForm() {
                   <div className="w-full">
                     <div className="text-sm font-medium leading-none text-slate-700">
                       Company Name
+                      <span className="text-red-500 ml-1">*</span>
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)]">
                       <input
@@ -272,7 +276,8 @@ function ContactForm() {
               <div className="w-full max-md:max-w-full">
                 <div className="w-full max-md:max-w-full">
                   <div className="text-sm font-medium leading-none text-slate-700">
-                    Phone number (optional)
+                    Phone number{" "}
+                    <span className="text-gray-400 text-xs">(optional)</span>
                   </div>
                   <div className="flex overflow-hidden gap-2 items-center px-3.5 py-2.5 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)] max-md:max-w-full">
                     <input
@@ -297,6 +302,7 @@ function ContactForm() {
             <div className="mt-6 w-full max-md:max-w-full">
               <div className="text-sm font-medium leading-none text-slate-700 my-4">
                 Company Size
+                <span className="text-red-500 ml-1">*</span>
               </div>
               <div className="w-full flex gap-3 flex-col md:flex-row">
                 {["1-10", "11-50", "51-200", "201-500", "500+"].map((size) => (
@@ -333,6 +339,7 @@ function ContactForm() {
                 <div className="w-full max-md:max-w-full">
                   <div className="text-sm font-medium leading-none text-slate-700">
                     Expected monthly payment volume (in USD or equivalent)
+                    <span className="text-red-500 ml-1">*</span>
                   </div>
                   <div className="flex overflow-hidden gap-2 items-center px-3.5 py-2.5 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)] max-md:max-w-full">
                     <input
@@ -360,6 +367,7 @@ function ContactForm() {
                 <div className="flex-1 w-full max-md:max-w-full">
                   <div className="text-sm font-medium leading-none text-slate-700">
                     Share your goals or questions
+                    <span className="text-red-500 ml-1">*</span>
                   </div>
                   <div className="flex overflow-hidden gap-2 items-center px-3.5 py-2.5 mt-1.5 w-full text-base text-gray-500 bg-white rounded-lg border border-solid shadow-sm border-[color:var(--Gray-300,#D0D5DD)] max-md:max-w-full">
                     <textarea
