@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -50,8 +51,14 @@ const Footer = () => {
             {/* Rhyno Financial (ryno) is authorized by the Financial Transactions and Reports Analysis Centre of Canada (FINTRAC) for the provision of money transferring and payment services under Money Services Business (MSB) registration number C100000021) and incorporated by the Government of Alberta (Corporate Access Number: 2026336632) */}
           </p>
           <p className="hidden lg:block mt-6 text-gray-500 text-center lg:text-left">
-            © {new Date().getFullYear()} ryno • Privacy Policy • Terms of
-            Service{" "}
+            © {new Date().getFullYear()} ryno • {" "}
+            <Link href="/documentation/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>{" "}
+            • {" "}
+            <Link href="/documentation/terms-and-conditions" className="hover:text-white transition-colors">
+              Terms of Service
+            </Link>{" "}
           </p>
         </div>
         <div className="flex flex-col items-center lg:items-end">
@@ -102,8 +109,14 @@ const Footer = () => {
             </a> */}
           </div>
           <p className="lg:hidden block mt-6 text-gray-500 text-center lg:text-left">
-            © {new Date().getFullYear()} ryno • Privacy Policy • Terms of
-            Service{" "}
+            © {new Date().getFullYear()} ryno • {" "}
+            <Link href="/documentation/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>{" "}
+            • {" "}
+            <Link href="/documentation/terms-and-conditions" className="hover:text-white transition-colors">
+              Terms of Service
+            </Link>{" "}
           </p>
         </div>
       </div>
