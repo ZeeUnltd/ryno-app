@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation";
 import { Icons } from "@/app/constants/icons";
 import {
   Search,
@@ -28,46 +29,20 @@ const DocumentationLayout: React.FC<DocumentationLayoutProps> = ({
   activeTab,
   setActiveTab,
 }) => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarItems, setSidebarItems] = useState<SidebarItem[]>([
     {
-      title: "Lorem Ipsum",
-      isExpanded: true,
-      hasChildren: true,
-      children: [
-        "Lorem",
-        "Enim",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem",
-      ],
-    },
-    {
-      title: "Lorem Ipsum",
-      isExpanded: true,
-      hasChildren: true,
-      children: ["Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem"],
-    },
-    {
-      title: "Lorem",
-      isExpanded: false,
-      hasChildren: true,
-    },
-    {
-      title: "Lorem ipsum dolor",
-      isExpanded: false,
-      hasChildren: true,
-    },
-    {
-      title: "Lorem",
+      title: "Privacy Policy",
       isExpanded: false,
       hasChildren: false,
     },
     {
-      title: "Lorem Ipsum",
+      title: "Terms & Conditions",
       isExpanded: false,
-      hasChildren: true,
+      hasChildren: false,
     },
   ]);
 
@@ -111,19 +86,19 @@ const DocumentationLayout: React.FC<DocumentationLayoutProps> = ({
 
             <nav className="hidden md:flex items-center space-x-6">
               <Link
-                href="#"
+                href="/#why-us"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 Why Ryno
               </Link>
               <Link
-                href="#"
+                href="/#solutions"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 Solutions
               </Link>
               <Link
-                href="#"
+                href="/#contact-section"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 Contact Us
@@ -139,7 +114,7 @@ const DocumentationLayout: React.FC<DocumentationLayoutProps> = ({
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
 
-            <div className=" whitespace-nowrap ml-auto flex justify-end">
+            {/* <div className=" whitespace-nowrap ml-auto flex justify-end">
               <Link
                 href="http://app.rynopay.io"
                 target="_blank"
@@ -150,7 +125,7 @@ const DocumentationLayout: React.FC<DocumentationLayoutProps> = ({
                 </span>
                 <span>Start on WhatsApp</span>
               </Link>
-            </div>
+            </div> */}
 
             <div className="md:block md:w-2/12 whitespace-nowrap ml-auto flex justify-end">
               <Link
@@ -188,35 +163,53 @@ const DocumentationLayout: React.FC<DocumentationLayoutProps> = ({
             </h2>
 
             <div className="space-y-1">
-              {sidebarItems.map((item, index) => (
-                <div key={index}>
-                  <button
-                    onClick={() => item.hasChildren && toggleSidebarItem(index)}
-                    className="w-full flex items-center justify-between px-3 py-2 text-left text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
-                  >
-                    <span className="text-sm">{item.title}</span>
-                    {item.hasChildren &&
-                      (item.isExpanded ? (
-                        <ChevronDown size={16} />
-                      ) : (
-                        <ChevronRight size={16} />
-                      ))}
-                  </button>
+              {sidebarItems.map((item, index) => {
+                const isActive = 
+                  (item.title === "Privacy Policy" && (activeTab === "privacy" || pathname === "/documentation/privacy-policy")) ||
+                  (item.title === "Terms & Conditions" && (activeTab === "terms" || pathname === "/documentation/terms-and-conditions"));
+                
+                return (
+                  <div key={index}>
+                    <button
+                      onClick={() => {
+                        if (item.title === "Privacy Policy") {
+                          router.push("/documentation/privacy-policy");
+                        } else if (item.title === "Terms & Conditions") {
+                          router.push("/documentation/terms-and-conditions");
+                        } else if (item.hasChildren) {
+                          toggleSidebarItem(index);
+                        }
+                      }}
+                      className={`w-full flex items-center justify-between px-3 py-2 text-left rounded-lg transition-colors ${
+                        isActive
+                          ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800"
+                          : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      }`}
+                    >
+                      <span className="text-sm font-medium">{item.title}</span>
+                      {item.hasChildren &&
+                        (item.isExpanded ? (
+                          <ChevronDown size={16} />
+                        ) : (
+                          <ChevronRight size={16} />
+                        ))}
+                    </button>
 
-                  {item.isExpanded && item.children && (
-                    <div className="ml-4 mt-1 space-y-1">
-                      {item.children.map((child, childIndex) => (
-                        <button
-                          key={childIndex}
-                          className="w-full text-left px-3 py-1.5 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
-                        >
-                          {child}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+                    {item.isExpanded && item.children && (
+                      <div className="ml-4 mt-1 space-y-1">
+                        {item.children.map((child, childIndex) => (
+                          <button
+                            key={childIndex}
+                            className="w-full text-left px-3 py-1.5 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+                          >
+                            {child}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </aside>
@@ -225,30 +218,7 @@ const DocumentationLayout: React.FC<DocumentationLayoutProps> = ({
         <main className="flex-1 min-h-screen">
           <div className="p-6">
             {/* Tab Navigation */}
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center space-x-6">
-                <button
-                  onClick={() => setActiveTab("terms")}
-                  className={`pb-2 text-sm font-medium border-b-2 ${
-                    activeTab === "terms"
-                      ? "text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400"
-                      : "text-gray-500 dark:text-gray-400 border-transparent hover:text-gray-700 dark:hover:text-gray-300"
-                  }`}
-                >
-                  T&C
-                </button>
-                <button
-                  onClick={() => setActiveTab("privacy")}
-                  className={`pb-2 text-sm font-medium border-b-2 ${
-                    activeTab === "privacy"
-                      ? "text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400"
-                      : "text-gray-500 dark:text-gray-400 border-transparent hover:text-gray-700 dark:hover:text-gray-300"
-                  }`}
-                >
-                  Privacy Policy
-                </button>
-              </div>
-
+            <div className="flex items-center justify-end mb-6">
               <div className="relative">
                 <Search
                   size={16}
