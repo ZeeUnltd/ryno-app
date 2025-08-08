@@ -5,6 +5,11 @@
 :root {
   --color-primary: #0040C2;
 }
+
+:root.dark {
+  --color-primary: #3B82F6;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

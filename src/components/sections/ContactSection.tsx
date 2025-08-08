@@ -88,15 +88,14 @@ function ContactSections() {
                       </div>
                       <div className="flex items-start self-start mt-5 text-base font-medium text-white underline whitespace-nowrap">
                         <div className="gap-2 self-stretch text-white underline decoration-auto decoration-solid underline-offset-auto text-xl font-semibold">
-                          info@rynopay.io
-                        </div>
+                          <a href="mailto:info@rynopay.io">info@rynopay.io</a>                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="md:flex lg:gap-4 items-center w-full mt-[406px] max-md:mt-10">
-                <div className="w-16 h-16 bg-white rounded-full flex justify-center items-center">
+                {/* <div className="w-16 h-16 bg-white rounded-full flex justify-center items-center">
                   <a
                     href="https://www.facebook.com/ryno-pay/"
                     target="_blank"
@@ -113,7 +112,7 @@ function ContactSections() {
                   >
                     <Icons.twitter />
                   </a>
-                </div>
+                </div> */}
                 <div className="w-16 h-16 bg-white rounded-full flex justify-center items-center">
                   <a
                     href="https://www.linkedin.com/company/ryno-pay/"
