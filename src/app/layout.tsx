@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={fraunces.variable}>
+      <body className={`${fraunces.variable} bg-white dark:bg-gray-900 transition-colors duration-300`}>
         {/* <Navbar /> */}
         {children}
       </body>
