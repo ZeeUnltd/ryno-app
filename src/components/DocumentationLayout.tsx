@@ -35,12 +35,12 @@ const DocumentationLayout: React.FC<DocumentationLayoutProps> = ({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarItems, setSidebarItems] = useState<SidebarItem[]>([
     {
-      title: "Privacy Policy",
+      title: "Terms & Conditions",
       isExpanded: false,
       hasChildren: false,
     },
     {
-      title: "Terms & Conditions",
+      title: "Privacy Policy",
       isExpanded: false,
       hasChildren: false,
     },
@@ -234,8 +234,8 @@ const DocumentationLayout: React.FC<DocumentationLayoutProps> = ({
 
             {/* Content */}
             <div className="max-w-4xl">
-              {activeTab === "terms" && <TermsAndConditionsContent />}
               {activeTab === "privacy" && <PrivacyPolicyContent />}
+              {activeTab === "terms" && <TermsAndConditionsContent />}
             </div>
           </div>
         </main>
