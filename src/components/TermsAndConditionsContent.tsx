@@ -4,13 +4,13 @@ const TermsAndConditionsContent: React.FC = () => {
   return (
     <div className="prose dark:prose-invert max-w-none">
       <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-        Terms and Conditions
+        TERMS AND CONDITIONS
       </h1>
 
       <p className="text-gray-600 dark:text-gray-400 mb-8">
-        Please read these platform terms of use ("Agreement") carefully because
+        Please read these platform terms of use ("<strong>Agreement</strong>") carefully because
         it is a binding contract between the user that accepts this Agreement
-        ("User") and Rhyno Financial Inc., a Alberta, Canada company ("ryno"),
+        ("<strong>User</strong>") and Rhyno Financial Inc., a Alberta, Canada company ("<strong>ryno</strong>"),
         authorised and regulated by Financial Transactions and Reports Analysis
         Centre (FINTRAC) as a Money Service Business (MSB) Registration Number
         C100000021, governing User use of the services available through the
@@ -18,7 +18,7 @@ const TermsAndConditionsContent: React.FC = () => {
         <a className="underline text-blue-600 dark:text-blue-400" href="https://www.rynopay.io">
           https://www.rynopay.io
         </a>{" "}
-        ("Site") through which they may be made available (the "Services"). By
+        ("<strong>Site</strong>") through which they may be made available (the "<strong>Services</strong>"). By
         checking an opt-in box, clicking on "I Accept" or otherwise accepting
         this Agreement on the sign-up page, or otherwise accessing or using the
         Services, User acknowledges that they have read, understood, and agree
@@ -1151,9 +1151,15 @@ const TermsAndConditionsContent: React.FC = () => {
       
       <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700">
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          Last updated: August 12, 2025
+          <span className="font-semibold">Effective Date:</span> August 12, 2025
         </p>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+          <span className="font-semibold">Last Updated:</span> August 12, 2025
+        </p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+          <span className="font-semibold">Version:</span> 1.0
+        </p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
           For questions about these Terms and Conditions, please contact us at{" "}
           <a 
             href="mailto:legal@rynopay.io" 
