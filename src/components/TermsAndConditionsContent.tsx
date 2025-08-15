@@ -70,26 +70,16 @@ const TermsAndConditionsContent: React.FC = () => {
           servicers, that we call Third Party Servicers. By applying to open a
           deposit account or other financial services account with a Third Party
           Servicer through the Services, User also hereby agrees to the
-          following with each of the following Third Party Servicers:
+          following with each of the following Third Party Servicer(s):{" "}
+          <a
+            href="https://noah.com/en/terms-of-service"
+            className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>
         </p>
-        <div className="space-y-2">
-          <a
-            href="https://noah.com/en/terms-of-service?terms=us"
-            className="block text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://noah.com/en/terms-of-service?terms=us
-          </a>
-          <a
-            href="https://zenus.com/en/group/legal-documents/website-terms-of-use"
-            className="block text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://zenus.com/en/group/legal-documents/website-terms-of-use
-          </a>
-        </div>
         <p className="text-gray-700 dark:text-gray-300 mt-4">
           The Third Party Servicer Agreements and disclosures listed above are incorporated into this Agreement and form part of this Agreement. ryno recommends that you print a copy of this Agreement and each of the above Third Party Servicer Agreements for your records. If not defined in the body of this Agreement, capitalized terms used in this Agreement are defined in the glossary at the end of this Agreement.
         </p>
@@ -586,7 +576,7 @@ const TermsAndConditionsContent: React.FC = () => {
           Nigeria Direct Debit Mandate
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          User hereby requests, instructs and authorizes ryno and its Affiliates or designees to debit User's Financial Account in accordance with any direct debit instruction issued and delivered to you by the User for such amounts necessary for daily/monthly/quarterly/semi-annual payments due in respect of this Agreement ("Nigeria Direct Debit Mandate") commencing as of the date on which this Agreement is accepted by User and ending thirty (30) days following termination of this Agreement. All such debits from User's Financial Account by ryno in accordance with any direct debit instruction issued and delivered to ryno by the User through the Services shall be treated as though they have been signed by User. The amounts are variable and may be debited on various dates. User understands that ryno may change the amount and dates only after giving User prior notice. User understands that the withdrawals hereby authorised will be processed by electronic funds transfer, and User also understands that details of each withdrawal will be printed on my bank statement and/or an accompanying voucher. User agrees to pay any bank charges relating to this Nigeria Direct Debit Mandate. This Nigeria Direct Debit Mandate may be cancelled by User by giving both Third Party Servicer and ryno twenty (20) Business Days notice in writing, sent by prepaid registered post, or delivered to the addresses stated above, but User understands that User shall not be entitled to any refund of amounts which may have already been withdrawn while this Nigeria Direct Debit Mandate was in force if such amounts were legally owing to the ryno. User understands that if any direct debit instruction is paid which breaches the terms of this Nigeria Direct Debit Mandate, User shall not be liable to ryno in any way or manner whatsoever, whether under contract, tort or negligence and that our recourse shall be limited to ryno.
+          User hereby requests, instructs and authorizes ryno and its Affiliates or designees to debit User's Financial Account in accordance with any direct debit instruction issued and delivered to you by the User for such amounts necessary for daily/monthly/quarterly/semi-annual payments due in respect of this Agreement ("Nigeria Direct Debit Mandate") commencing as of the date on which this Agreement is accepted by User and ending thirty (30) days following termination of this Agreement. All such debits from User's Financial Account by ryno in accordance with any direct debit instruction issued and delivered to ryno by the User through the Services shall be treated as though they have been signed by User. The amounts are variable and may be debited on various dates. User understands that ryno may change the amount and dates only after giving User prior notice. User understands that the withdrawals hereby authorized will be processed by electronic funds transfer, and User also understands that details of each withdrawal will be printed on my bank statement and/or an accompanying voucher. User agrees to pay any bank charges relating to this Nigeria Direct Debit Mandate. This Nigeria Direct Debit Mandate may be cancelled by User by giving both Third Party Servicer and ryno twenty (20) Business Days notice in writing, sent by prepaid registered post, or delivered to the addresses stated above, but User understands that User shall not be entitled to any refund of amounts which may have already been withdrawn while this Nigeria Direct Debit Mandate was in force if such amounts were legally owing to the ryno. User understands that if any direct debit instruction is paid which breaches the terms of this Nigeria Direct Debit Mandate, User shall not be liable to ryno in any way or manner whatsoever, whether under contract, tort or negligence and that our recourse shall be limited to ryno.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
@@ -676,11 +666,11 @@ const TermsAndConditionsContent: React.FC = () => {
               </p>
 
               <p className="text-gray-600 dark:text-gray-400">
-                The individual signing or accepting this Agreement on your behalf is duly authorised and empowered to bind you legally to its terms;
+                The individual signing or accepting this Agreement on your behalf is duly authorized and empowered to bind you legally to its terms;
               </p>
 
               <p className="text-gray-600 dark:text-gray-400">
-                You have obtained, and will maintain, all required licences, approvals, consents, or other authorisations from relevant regulators or authorities necessary to lawfully receive and use the Services;
+                You have obtained, and will maintain, all required licenses, approvals, consents, or other authorizations from relevant regulators or authorities necessary to lawfully receive and use the Services;
               </p>
 
               <p className="text-gray-600 dark:text-gray-400">
@@ -780,7 +770,7 @@ const TermsAndConditionsContent: React.FC = () => {
               15.1. Governing Law
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              This Agreement shall be governed pursuant to the laws of the State of Delaware without regard to its conflict of laws rules.
+              This Agreement shall be governed pursuant to the laws of Alberta, Canada without regard to its conflict of laws rules.
             </p>
           </div>
 
@@ -1134,12 +1124,14 @@ const TermsAndConditionsContent: React.FC = () => {
           Compliance with Laws
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          You agree to comply with all applicable laws and regulations, including, without limitation, Canadian laws, international anti-money laundering (AML) and counter-terrorist financing (CFT) obligations, and sanctions regulations enforced by the Office of Foreign Assets Control (OFAC), the Financial Transactions and Reports Analysis Centre of Canada (FINTRAC), and any other relevant regulatory authorities. Rhyno Financial Inc reserves the right to monitor activity and report any suspicious or potentially unlawful conduct to the appropriate law enforcement or regulatory agencies as required or permitted by applicable law.
+          You agree to comply with all applicable laws and regulations, including, without limitation, Canadian laws, international anti-money laundering (AML) and counter-terrorist financing (CFT) obligations, and sanctions regulations enforced by the Office of Foreign Assets Control (OFAC), the Financial Transactions and Reports Analysis Centre of Canada (FINTRAC), and any other relevant regulatory authorities. Rhyno Financial Inc. reserves the right to monitor activity and report any suspicious or potentially unlawful conduct to the appropriate law enforcement or regulatory agencies as required or permitted by applicable law.
         </p>
+      </section>
 
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
           Governing Law
-        </h3>
+        </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           These Terms shall be governed by and construed in accordance with the laws of Alberta, Canada, without giving effect to any principles of conflicts of law.
         </p>
